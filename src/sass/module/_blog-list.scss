@@ -24,7 +24,7 @@
     font-family: $english-font-family;
 }
 .blog-list__meta{
-    border-bottom:1px solid pink;//あとで色変更
+    border-bottom:1px solid $main-green;//あとで色変更
     padding-bottom: rem(4);
 }
 .blog-list__text-body{

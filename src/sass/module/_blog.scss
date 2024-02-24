@@ -5,7 +5,12 @@
         display:block;
         margin: 0 calc(50% - 50vw);
         width: 100vw;   
+        aspect-ratio:1440/500 ;
     }
+}
+.blog__background img{
+    height: 100%;
+    object-fit: cover;
 }
 .blog__inner{   
     @include mq('md'){

@@ -10,8 +10,7 @@
     width: 37%;
     min-width: rem(128);
     @include mq('md'){
-        aspect-ratio:606/400;
-        min-width: none;
+        aspect-ratio:400/606;
     }
     
 }
@@ -28,7 +27,7 @@
     }
 }
 .about__image01 img,
-.about__image02{
+.about__image02 img{
     object-fit: cover;
     height: 100%;
 }
