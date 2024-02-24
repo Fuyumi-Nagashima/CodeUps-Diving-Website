@@ -1,0 +1,51 @@
+@use "global" as *;
+.pc-nav__items{
+    display: flex;
+    align-items: center;
+    height:inherit;
+}
+.pc-nav__item{
+    height: inherit;
+}
+.pc-nav__link{
+    font-size: rem(18);
+    height: inherit;
+    line-height: 1;
+    padding: 0 rem(20); /* 元の padding をそのまま指定 */
+    color: $white;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $english-font-family;
+    position: relative;
+    overflow: hidden; /* リンクの幅を超える部分を隠す */
+}
+.pc-nav__item:last-child a{
+    padding-right:0;
+}
+.pc-nav__item span{
+    display: block;
+    margin-top:rem(4);
+    font-size:rem(10);
+    text-align: center;
+    line-height: calc(15/10);
+    color: $white;
+}
+.pc-nav__link::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + -23px);
+    width: 0;
+    height:rem(1);
+    background: white;
+    transition: all  0.3s ease;
+    
+}
+.pc-nav__link:hover::before{
+    width: calc(100% - rem(40)); /* リンクの幅からpaddingを除いた幅を設定 */
+}
+.pc-nav__item:last-child .pc-nav__link:hover::before{
+    width: calc(100% - 20px); /* リンクの幅全体に下線を表示 */
+}

@@ -1,0 +1,22 @@
+@use "global" as *;
+.layout-about{
+    padding-top:rem(80); 
+    padding-bottom:rem(70);
+    @include mq('md'){
+        position:relative;
+        padding-top:rem(140);
+        padding-bottom:rem(164);
+    }
+}
+.layout-about::after{
+    @include mq('md'){
+        position: absolute;
+        content: "";
+        right: 83px;
+        bottom:74px;
+        height:rem(181);
+        width:rem(194);
+        background:url(/assets/images/common/about-us-icon.png) no-repeat;
+        background-size:contain;
+}
+}

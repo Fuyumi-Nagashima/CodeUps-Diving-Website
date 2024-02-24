@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.section-title{
+    text-align: center;
+}
+.section-title__primary{
+    font-size: rem(32);
+    font-weight: $regular;
+    font-family: $english-font-family;
+    color:$font-color ;
+    text-transform: capitalize;
+    line-height: calc(40/32);
+    @include mq('md'){
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+.section-title__primary::first-letter{
+    color:$main-green;
+}
+.section-title__sub{
+    font-size: rem(12);
+    line-height: calc(18/12);
+    color:$main-green;
+    font-weight:$regular ;
+    margin-top:rem(4);
+    @include mq('md'){
+        margin-top: rem(8);
+    }
+}

@@ -1,0 +1,39 @@
+@use "global" as *;
+.blog__background{
+    display:none;
+    @include mq('md'){
+        display:block;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;   
+    }
+}
+.blog__inner{   
+    @include mq('md'){
+        position:relative;
+    }
+}
+.section-title.blog__section-title{
+    @include mq('md'){
+        position:absolute;
+        top:100px;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+}
+.blog__btn{
+    text-align:center;
+    margin-top:rem(40);
+    @include mq('md'){
+        margin-top:rem(80);
+    }
+}
+.blog__content{
+    display:grid;
+    row-gap:rem(40);
+    margin-top:rem(24);
+    @include mq('md'){
+        grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+        column-gap:rem(40);
+        margin-top:rem(-253);
+    }
+}

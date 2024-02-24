@@ -1,0 +1,126 @@
+@use "global" as *;
+.inner .footer__inner{
+    padding-left: rem(15);
+    padding-right: rem(15);
+}
+.footer__top{
+    @include mq('md'){
+        display:flex;
+        gap:rem(40);
+        align-items: flex-end;
+    }
+}
+.footer__logo-link{
+    display: block;
+    max-width:rem(120);
+    width: 100%;
+    @include mq('md'){
+        max-width:rem(200); 
+    }
+}
+.footer__logo-link img{
+    height:100%;
+}
+.footer__sns{
+    display:flex;
+    gap: rem(16);
+    margin-top: rem(16);
+    @include mq('md'){
+    margin-top:0 ;
+    }
+}
+.footer__sns li{
+    width: rem(24);
+    @include mq('md'){
+    width: rem(33);
+    }
+}
+.footer__nav{
+    margin-top:rem(40);
+    @include mq('md'){
+        margin-top: rem(24);
+    
+    }
+}
+.footer-nav__items{
+    display: flex;
+    flex-direction:column;
+    gap:rem(40);
+}
+
+.footer-nav__content{
+    // margin-top: rem(43); 
+    // display:flex;あとで解除
+    column-gap:rem(16) ; 
+    row-gap:rem(40);
+    display: grid;
+    grid-template-columns:rem(168) rem(150);
+    grid-template-rows:1fr 1fr;
+    grid-template-areas:
+    "item01 item03"
+    "item02 item04"
+    ;
+    @include mq('md'){
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+    "item01 item02 item03 item04" ;
+    }
+}
+.item01{
+    grid-area:item01;
+}
+.item02{
+    grid-area:item02;
+}
+.item03{
+    grid-area:item03;
+}
+.item04{
+    grid-area:item04;
+}
+.footer-nav__heading{
+    position: relative;
+    padding-left:rem(22) ;
+    font-size: rem(16);
+    line-height: calc(18/16);
+    font-weight: $bold;
+    color:$white;
+}
+.footer-nav__heading::before {
+    content: "";
+    position: absolute;
+    background-position:left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left:0;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/drawer-icon.png) ;
+}
+.footer-nav__list{
+    display: grid;
+    row-gap: rem(24);
+    margin-top:rem(24);
+}
+.footer-nav__list li{
+    margin-left:rem(21);
+    font-size: rem(16);
+    line-height: calc(18/16);
+    font-weight:300;    
+    color: $white;
+}
+
+.footer__copyright{
+    font-size:rem(17);
+    line-height: calc(18/14);
+    font-family: $english-font-family;
+    color: $white;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: rem(40);
+    @include mq('md'){
+        margin-top:rem(80);
+    }
+}

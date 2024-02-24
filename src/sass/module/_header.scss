@@ -1,0 +1,42 @@
+@use "global" as *;
+.header{
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.25);
+    height:rem(80) ;
+    width: 100%;
+    @include mq('md'){
+        height:rem(90) ;
+    }
+}
+.header__inner{
+    padding-left: rem(15);
+    padding-right: rem(15);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq('md'){
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+}
+.header__logo{
+    max-width: rem(102);
+    width: 100%;
+    height: inherit;
+    @include mq('md'){
+    max-width: rem(133);
+    }
+}
+.header__logo-link{
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.header__pc-nav{
+    height:inherit;
+}
+.header.change-color {
+    background-color: #00cc99; //スクロールしたあとのヘッダー背景色
+    transition: 0.3s;
+}

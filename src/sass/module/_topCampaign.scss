@@ -1,0 +1,111 @@
+@use "global" as *;
+/*swiper*/
+.topCampaign{
+    overflow-x:hidden;
+}
+.inner.topCampaign__inner{
+    margin: auto;
+    max-width: rem(600);
+    width: 100%;
+    @include mq(md){
+        padding: 0 rem(25);
+        max-width: rem(1130);
+    }
+}
+.topCampaign__swiper-container {
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+}
+.topCampaign__slide{
+    width: rem(280);
+    @include mq('md'){
+        width: rem(333);
+    }
+}
+.topCampaign__swiper-container{
+    margin-top:rem(24);
+    @include mq('md'){
+        margin-top:rem(40);
+    }
+}
+.topCampaign__btn{
+    text-align:center;  
+    margin-top: rem(40);
+    @include mq('md'){
+    margin-top: rem(80);
+    }
+}
+
+//swiperのボタン
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "";
+}
+.topCampaign__btn-wrap{
+    @include mq('md'){
+        display:flex;
+        justify-content: flex-end;
+    }   
+}
+.topCampaign__btn-wrap .swiper-button-next {
+    @include mq('md'){
+        margin-left: rem(80);
+    }
+   
+}
+.topCampaign__btn-wrap .swiper-button-prev,
+.topCampaign__btn-wrap .swiper-button-next {
+    @include mq('md'){
+        position: relative;
+        width: rem(80);
+        height:rem(80);
+        background-color:$white;
+        border-radius: 50%;
+        border: 1px solid $main-green;
+        transition: all 0.3s; 
+    }   
+}
+.topCampaign__btn-wrap .swiper-button-prev::before,
+.topCampaign__btn-wrap .swiper-button-next::before {
+    @include mq('md'){
+        content: "";
+        position: absolute;
+        width: rem(40);
+        height: rem(8);
+        background-size: contain;
+        background-repeat:no-repeat;
+    }
+    
+}
+.topCampaign__btn-wrap .swiper-button-prev::before {
+    @include mq('md'){
+        background-image:url(../images/common/prev-arrow.png);
+    }
+}
+.topCampaign__btn-wrap .swiper-button-next::before {
+    @include mq('md'){
+        background-image:url(../images/common/next-arrow.png)
+    }
+    
+}
+.swiper-button-prev,
+.swiper-button-next{
+    @include mq('md'){
+        transition:all 0.3s; 
+    }
+    
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    @include mq('md'){
+        background-color:$main-green;
+    }
+    
+}
+.topCampaign__btn-wrap .swiper-button-prev:hover::before,
+.topCampaign__btn-wrap .swiper-button-next:hover::before {
+    @include mq('md'){
+    filter: brightness(0) invert(1);
+    }
+}
+

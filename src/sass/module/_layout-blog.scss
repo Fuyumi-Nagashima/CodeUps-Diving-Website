@@ -1,0 +1,19 @@
+@use "global" as *;
+.layout-blog{ 
+    padding-top:rem(80);  
+    @include mq('md'){
+        padding-top:0;
+    }
+}
+.layout-blog::after{
+    @include mq('md'){
+        background: url(/assets/images/common/top-blog-icon.png) no-repeat;
+        background-size:contain;
+        top: 25px;
+        content: "";
+        height: rem(201);
+        position: absolute;
+        left: 100px;
+        width: rem(437);
+    }
+}

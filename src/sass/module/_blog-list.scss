@@ -1,0 +1,37 @@
+@use "global" as *;
+.blog-list{
+    padding: rem(16) rem(16) rem(24);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: block;
+    background-color: $white;
+}
+.blog-list__image{
+    aspect-ratio:301/201 ;
+    @include mq('md'){
+        aspect-ratio:301/201;
+    }
+}
+.blog-list__image img{
+    object-fit: cover;
+    height: 100%;
+}
+.blog-list__body{
+    margin-top: rem(24);
+}
+.blog-list__date{
+    font-size: rem(12);
+    line-height: calc(18/12);
+    font-family: $english-font-family;
+}
+.blog-list__meta{
+    border-bottom:1px solid pink;//あとで色変更
+    padding-bottom: rem(4);
+}
+.blog-list__text-body{
+    margin-top: rem(16);
+}
+.blog-list__text{
+    font-size: rem(16);
+    line-height: calc(24/16);
+    // font-weight: $regular;あとで解除する
+}
