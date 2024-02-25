@@ -3,8 +3,4 @@
     padding-top:rem(54);
     padding-bottom:rem(100);
     // filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.25));
-    @include mq('md'){
-        max-width:rem(1080);
-        // filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.25));
-    }
 }

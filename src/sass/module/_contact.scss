@@ -2,6 +2,10 @@
 .inner.contact__inner{
     padding-right:rem(40);
     padding-left:rem(40);
+    @include mq('md'){
+        padding-right:rem(25);
+        padding-left:rem(25);
+    }
 }
 .contact__logo{
     border-bottom:1px solid $main-green;
@@ -24,30 +28,50 @@
 .contact__container{
     @include mq('md'){
         display: flex;
+        justify-content: center;
+        align-items:center;
+        padding:rem(80) rem(112) rem(80) rem(50);
+        background-color: aliceblue;/*あとで消す*/
+    }
+}
+.contact__information{
+    @include mq('md'){
+        padding-right:rem(82);
+        border-right: 1px solid $main-green;
     }
 }
 .contact__address-wrap{
-    padding-top:rem(16);
+    margin-top:rem(16);
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     text-align:center;
     gap:rem(16);
+    @include mq('md'){
+        margin-top:rem(24);
+        flex-direction: row;
+        align-items: flex-start;
+        gap: rem(21);
+        margin-top:rem(24);
+        text-align: left;
+    }
 }
-.contact__information{
+.contact__shop-information{
     display: flex;
     flex-direction: column;
     gap: rem(4);
     font-size: rem(16);
     line-height: calc(24/16);
     font-style: normal;
-
+    @include mq('md'){
+        width: rem(146);
+    }
 }
 .contact__information-img{
-    aspect-ratio:295/160 ;
+    aspect-ratio:295/160;
     @include mq('md'){
         aspect-ratio:273/148 ;
+        flex-shrink:1;
     }
 }
 .contact__information-img img{
@@ -55,7 +79,11 @@
     height: 100%;
 }
 .contact__form-area{
-    padding-top:rem(40);
+    padding-top:rem(40);    
+    @include mq('md'){
+        padding-top:0;
+        padding-left: 81px;
+    }
 }
 .contact__section-title h2{
     font-size: rem(80);
