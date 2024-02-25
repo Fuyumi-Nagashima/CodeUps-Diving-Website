@@ -42,3 +42,14 @@
         margin-top:rem(-253);
     }
 }
+.section-title .blog__section-title{
+    color:$white;
+    @include mq('md'){
+        color:$main-green;
+    }
+}
+.blog__section-title .section-title__primary::first-letter{
+    @include mq('md'){
+        color:$white;
+    }
+}

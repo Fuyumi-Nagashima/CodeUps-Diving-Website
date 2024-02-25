@@ -3,6 +3,9 @@
     padding: rem(15) rem(16) rem(24);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background-color: $white;
+    @include mq('md'){
+        padding: rem(24);
+    }
 }
 .voice-item__wrap{
     display: flex;
@@ -15,9 +18,13 @@
 .voice-item__head{
     border-bottom:1px solid $main-green ;
     padding-bottom: rem(4);
+    flex-grow: 1;
+    width: fit-content;
     @include mq('md'){
         display: flex;
-    
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 }
 .voice-item__profile{
@@ -34,24 +41,38 @@
     margin-top: rem(8);
     }
 }
-.voice-item_image{
+.voice-item__image{
     aspect-ratio: 151/117;
     margin-top: rem(9);
     max-width: rem(151);
     flex-shrink:0;
+    position: relative;
     @include mq('md'){
         aspect-ratio: 180/140;
+        max-width: rem(180);
     }
 }
-.voice-item__image{
+.voice-item__image img{
     object-fit:cover;
     height: 100%;
 }
 .voice-item__text-body{
     margin-top: rem(15);
+    @include mq('md'){
+        margin-top: rem(40);
+    }
 }
 .voice-item__text{
     font-size: rem(16);
     line-height: calc(24/16);
     font-weight: $regular;
+}
+.voice-item__image .color{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #408F95;
 }

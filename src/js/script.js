@@ -59,8 +59,8 @@ jQuery(function ($) {
         },
       });
     
-      //informationアニメーション
-      var box = $(".information__image"),
+      //informationアニメーション,
+      var box = $(".information__image,.voice-item__image"),
         speed = 700;
     
       //.colorboxの付いた全ての要素に対して下記の処理を行う

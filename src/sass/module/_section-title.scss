@@ -15,6 +15,11 @@
         line-height: 1;
     }
 }
+.section-title__primary--white{
+    @include mq('md'){
+        color:$white;
+    }
+}
 .section-title__primary::first-letter{
     color:$main-green;
 }
@@ -26,5 +31,10 @@
     margin-top:rem(4);
     @include mq('md'){
         margin-top: rem(8);
+    }
+}
+.section-title__sub--white{
+    @include mq('md'){
+        color:$white;
     }
 }

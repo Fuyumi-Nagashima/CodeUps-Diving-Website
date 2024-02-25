@@ -3,6 +3,7 @@
     padding-top:rem(80);  
     @include mq('md'){
         padding-top:0;
+        position: relative;
     }
 }
 .layout-blog::after{

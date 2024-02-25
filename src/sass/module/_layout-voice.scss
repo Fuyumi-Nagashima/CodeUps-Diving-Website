@@ -1,0 +1,34 @@
+@use "global" as *;
+.layout-voice{
+    padding:rem(80) 0 ;
+    @include mq("md"){
+        padding:rem(140) 0;
+        position:relative;
+    }
+}
+.layout-voice::before{
+    @include mq('md'){
+        position: absolute;
+        content: "";
+        left:100px;
+        top:0;
+        height:rem(138);
+        width:rem(301);
+        background:url(/assets/images/common/top-voice-icon01.png) no-repeat;
+        background-size:contain;
+    }
+    
+}
+.layout-voice::after{
+    @include mq('md'){
+        position: absolute;
+        content: "";
+        right:180px;
+        bottom:73px;
+        height:rem(162);
+        width:rem(71);
+        background:url(/assets/images/common/top-voice-icon02.png) no-repeat;
+        background-size:contain;
+    }
+    
+}
