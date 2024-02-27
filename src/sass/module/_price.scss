@@ -1,0 +1,36 @@
+@use "global" as *;
+.price__image{
+    display: block;
+    aspect-ratio:345/227;
+    @include mq('md'){
+        aspect-ratio:746/492;
+        order:1;
+        width:46%;
+    }
+}
+.price__image img{
+    object-fit:cover;
+    height:100%;
+}
+.price__table{
+    margin-top:rem(40);
+    @include mq('md'){
+        width:46%;
+        margin-top:0;
+}
+}
+.price__btn{
+    text-align:center;
+    margin-top:rem(40);
+    @include mq('md'){
+        margin-top:rem(80);
+    }
+}
+.price__wrapper{
+    margin-top:rem(24);
+    @include mq('md'){
+        margin-top:rem(40);
+        display:flex;
+        justify-content:space-between;
+    }
+}

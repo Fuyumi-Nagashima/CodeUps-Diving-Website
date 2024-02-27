@@ -1,0 +1,29 @@
+@use "global" as *;
+.price-table{
+    width:100%;
+    display:grid;
+    gap:rem(40);
+}
+.price-table__item{
+    display:flex;
+    justify-content:space-between;
+    padding-top:rem(8);
+}
+
+.price-table__head{
+    text-align:left;
+    font-size:rem(16);
+    line-height:calc(24/16);
+    font-weight:$bold;
+    border-bottom:1px solid $main-green;
+    padding-bottom:rem(4);
+}
+.price-table__course{
+    width:80%;
+    font-size: rem(14);
+    line-height: calc(24/14);
+}
+.price-table__price{
+    font-size: rem(14);
+    line-height: calc(24/14);
+}
