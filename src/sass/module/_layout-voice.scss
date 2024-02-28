@@ -17,7 +17,6 @@
         background:url(/assets/images/common/top-voice-icon01.png) no-repeat;
         background-size:contain;
     }
-    
 }
 .layout-voice::after{
     @include mq('md'){
@@ -30,5 +29,4 @@
         background:url(/assets/images/common/top-voice-icon02.png) no-repeat;
         background-size:contain;
     }
-    
 }

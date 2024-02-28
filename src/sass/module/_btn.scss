@@ -1,31 +1,31 @@
 @use "global" as *;
 .btn {
-  display: inline-block;
-  position: relative;
-  max-width: rem(202);
-  width: 100%;
-  font-size: rem(14);
-  line-height: 1;
-  font-weight: $regular;
-  font-family: $english-font-family;
-  color: $white;
-  border:1px solid $main-green;
-  padding: rem(16) rem(40);
-  background-color: $main-green;
-  z-index: 1;
+    display: inline-block;
+    position: relative;
+    max-width: rem(202);
+    width: 100%;
+    font-size: rem(14);
+    line-height: 1;
+    font-weight: $regular;
+    font-family: $english-font-family;
+    color: $white;
+    border:1px solid $main-green;
+    padding: rem(16) rem(40);
+    background-color: $main-green;
+    z-index: 1;
 }
 .btn span::first-letter{
     text-transform:uppercase;
 }
 .btn::before {
-  border: 1px solid $main-green;
-  content: "";
-  height: 100%;
-  right: -4px;
-  top: 4px;
-  position: absolute;
-  z-index: -999;
-  width: 100%;
+    border: 1px solid $main-green;
+    content: "";
+    height: 100%;
+    right: -4px;
+    top: 4px;
+    position: absolute;
+    z-index: -999;
+    width: 100%;
 }
 .btn span{
     display: inline-block;
@@ -61,6 +61,7 @@
 }
 .btn:hover{
     color: $main-green;
+    opacity:1   ;
 }
 .btn:hover::after{
     transform: scale(1, 1);

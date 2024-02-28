@@ -5,13 +5,8 @@
     display: block;
     background-color: $white;
 }
-.blog-list__image{
-    aspect-ratio:301/201 ;
-    @include mq('md'){
-        aspect-ratio:301/201;
-    }
-}
 .blog-list__image img{
+    aspect-ratio:301/201;
     object-fit: cover;
     height: 100%;
 }
@@ -24,7 +19,7 @@
     font-family: $english-font-family;
 }
 .blog-list__meta{
-    border-bottom:1px solid $main-green;//あとで色変更
+    border-bottom:1px solid $main-green;
     padding-bottom: rem(4);
 }
 .blog-list__text-body{

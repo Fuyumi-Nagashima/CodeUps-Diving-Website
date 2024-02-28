@@ -2,8 +2,8 @@
 .layout-blog{ 
     padding-top:rem(80);  
     @include mq('md'){
-        padding-top:0;
         position: relative;
+        padding-top:0; 
     }
 }
 .layout-blog::after{

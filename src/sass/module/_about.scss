@@ -6,30 +6,36 @@
     }
 }
 .about__image01{
-    aspect-ratio:128/194;
     width: 37%;
-    min-width: rem(128);
-    @include mq('md'){
-        aspect-ratio:400/606;
-    }
-    
+    min-width: rem(128);        
 }
 .about__image02{
     position:relative;
     z-index:-1;
     margin-left:auto;
-    aspect-ratio:281/186;
+    
     width:81%;
     min-width: rem(281);
     margin-top:-46%;
     @include mq('md'){
-        aspect-ratio: 880/581;
+        
     }
 }
-.about__image01 img,
-.about__image02 img{
+.about__image01 img{
+    aspect-ratio:128/194;   
     object-fit: cover;
     height: 100%;
+    @include mq('md'){
+        aspect-ratio:400/606;
+        }
+}
+.about__image02 img{
+    aspect-ratio:281/186;
+    object-fit: cover;
+    height: 100%;
+    @include mq('md'){
+        aspect-ratio: 880/581;
+    }
 }
 .about__text-wrap{
     margin-top: rem(40);
