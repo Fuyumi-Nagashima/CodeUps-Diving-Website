@@ -23,13 +23,14 @@
     }
 }
 .topCampaign__swiper-container{
-    margin-top:rem(24);
+    margin-top:rem(30);
     @include mq('md'){
         margin-top:rem(40);
     }
 }
 .topCampaign__btn{
-    text-align:center;  
+    display:flex;
+    justify-content:center;
     margin-top: rem(40);
     @include mq('md'){
     margin-top: rem(80);

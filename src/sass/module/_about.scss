@@ -68,7 +68,8 @@
     }
 }
 .about__btn{
-    text-align:center;
+    display:flex;
+    justify-content:center;
     margin-top:rem(50);
     @include mq('md'){
         margin-top:rem(40);

@@ -1,19 +1,22 @@
 @use "global" as *;
 .btn {
-    display: inline-block;
-    position: relative;
-    max-width: rem(202);
+    position:relative;
+    justify-content: center;
+    display: flex;
+    color:$white;
+    align-items: center;
+    cursor: pointer;
+    max-width:rem(202);
     width: 100%;
-    font-size: rem(14);
-    line-height: 1;
+    font-size:rem(14);
+    line-height:calc(22/14);
     font-weight: $regular;
     font-family: $english-font-family;
-    color: $white;
-    border:1px solid $main-green;
+    color: white;
     padding: rem(16) rem(40);
-    background-color: $main-green;
-    z-index: 1;
-}
+    background-color:$main-green;
+    z-index:1;
+    }
 .btn span::first-letter{
     text-transform:uppercase;
 }
@@ -27,27 +30,12 @@
     z-index: -999;
     width: 100%;
 }
-.btn span{
-    display: inline-block;
-    padding-right:rem(8);
-}
-.btn span::after {
-    position: absolute;
-    content: "";
-    height: rem(6);
-    width: rem(40);
-    background-image: url(../images/common/button-arrow-white.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 45%;
-    transform: translateY(-50%);
-    margin-left: rem(8); /* 右側に余白を追加 */
-}
-.btn:hover span::after {
-    background-image: url(../images/common/button-arrow-blue.png); /* ホバー時の背景画像 */
+.btn span::first-letter{
+    text-transform:uppercase;
 }
 .btn::after{
-    background: #fff;
+    background:$white;
+    border:1px solid $main-green;
     position: absolute;
     top: 0;
     left: 0;  
@@ -57,12 +45,33 @@
     transform: scale(0, 1);
     transform-origin: left top;
     transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-    z-index: -1;
-}
-.btn:hover{
-    color: $main-green;
-    opacity:1   ;
+    z-index: -10;
 }
 .btn:hover::after{
-    transform: scale(1, 1);
+    transform:scale(1, 1);
+}  
+.btn__arrow{
+    margin-left:rem(8);
+    width:rem(40);
+    height:rem(6);
+    border-bottom: 1px solid $white;
+    border-right: 1px solid $white;
+    transform: skew(45deg);
 }
+.btn:hover span{
+    color:$main-green;
+}
+.btn:hover .btn__arrow{
+    margin-left:rem(8);
+    width:rem(40);
+    height:rem(6);
+    border-bottom: 1px solid $main-green;
+    border-right: 1px solid $main-green;
+    transform: skew(45deg);
+}
+.btn:hover{
+    color:$main-green;
+    opacity:1 ;
+    z-index:10;
+}
+    

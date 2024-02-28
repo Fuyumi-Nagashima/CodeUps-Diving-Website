@@ -15,15 +15,12 @@
     padding-left: rem(15);
     padding-right: rem(15);
     height: inherit;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
 }
 .drawer-menu__logo img {
     max-width: rem(102);
     width: 100%;
     height: inherit;
-    padding-top: rem(16);
+    padding-top: rem(21);
 }
 .header__drawer-menu::-webkit-scrollbar {
     display:none;
@@ -76,12 +73,5 @@
 }
 .drawer-menu__sns li{
     width: rem(24);
-
 }
 
-
-
-
-
-
-   
