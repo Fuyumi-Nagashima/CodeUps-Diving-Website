@@ -52,6 +52,7 @@
     }
 }   
 .information__body{
+    margin-top: rem(25);
     @include mq('md'){
         max-width:rem(492);
         width: 100%;

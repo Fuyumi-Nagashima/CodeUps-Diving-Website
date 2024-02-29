@@ -11,7 +11,7 @@
     height: 100%;
 }
 .blog-list__body{
-    margin-top: rem(24);
+    margin-top: rem(18);
 }
 .blog-list__date{
     font-size: rem(12);
@@ -25,8 +25,13 @@
 .blog-list__text-body{
     margin-top: rem(16);
 }
+.blog-list__title{
+    font-size: rem(16);
+    line-height: calc(24/16);
+    font-weight:$medium;
+
+}
 .blog-list__text{
     font-size: rem(16);
     line-height: calc(24/16);
-    // font-weight: $regular;あとで解除する
 }

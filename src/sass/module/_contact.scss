@@ -90,7 +90,11 @@
 }
 .contact__section-title h2{
     font-size: rem(80);
-    line-height: 1;
+    margin-left: rem(-6);
+    line-height:0.9;
+}
+.contact__section-title.section-title__sub{
+    margin-top:rem(4);
 }
 .contact__text{
     display:block;

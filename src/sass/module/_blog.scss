@@ -14,7 +14,9 @@
     min-height:rem(500);
 }
 }
-.blog__inner{
+.inner.blog__inner{
+    padding-right:rem(21);
+    padding-left:rem(21);
     @include mq('md'){
         margin-top:rem(-250);
     }
@@ -39,6 +41,7 @@
     display:grid;
     row-gap:rem(40);
     margin-top:rem(24);
+    margin-top: rem(31);
     @include mq('md'){
         // position: relative;
         grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));

@@ -1,9 +1,6 @@
 @use "global" as *;
-.about__images{
-    margin-top:rem(24);
-    @include mq('md'){
-        margin-top:rem(40);
-    }
+.about__section-title .section-title__primary span{
+    text-transform: lowercase;
 }
 .about__image01{
     width: 37%;
@@ -13,10 +10,9 @@
     position:relative;
     z-index:-1;
     margin-left:auto;
-    
     width:81%;
     min-width: rem(281);
-    margin-top:-46%;
+    margin-top:-49%;
     @include mq('md'){
         
     }
@@ -68,8 +64,7 @@
     }
 }
 .about__btn{
-    display:flex;
-    justify-content:center;
+    margin-left:rem(62);
     margin-top:rem(50);
     @include mq('md'){
         margin-top:rem(40);
@@ -77,6 +72,7 @@
 }
 .about__container{
     position:relative;
+    margin-top:rem(29);
 }
 .about__text-wrap{
     @include mq('md'){
