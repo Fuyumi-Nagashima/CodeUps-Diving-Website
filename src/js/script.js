@@ -59,11 +59,10 @@ jQuery(function ($) {
         },
       });
     
-      //informationアニメーション,
+      //色壁が出て写真が出てくるアニメーション,
       var box = $(".information__image,.voice-item__image,.price__image"),
         speed = 700;
     
-      //.colorboxの付いた全ての要素に対して下記の処理を行う
       box.each(function () {
         $(this).append('<div class="color"></div>');
         var color = $(this).find($(".color")),
