@@ -14,7 +14,7 @@
     padding: rem(16) rem(16) rem(24);
     background-color:$white;
     @include mq('md'){
-    padding: rem(24) rem(16) rem(24);
+    padding: rem(24) rem(16) rem(40);
     }
 }
 .campaign-list__content{
@@ -30,7 +30,7 @@
     border:1px solid $main-green;
     padding:rem(3) rem(11);
     @include mq('md'){
-    padding:rem(6) rem(16);
+    padding:rem(6) rem(14);
     }
 }
 .campaign-list__title{

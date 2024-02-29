@@ -37,6 +37,11 @@
     margin-top: rem(40);
     @include mq('md'){
         margin-top:0;
+        position:absolute;
+        top:49%;
+        left: 57%;
+        transform: translate(-50%, -50%);
+        display:flex;
     }
 }
 .about__text-title{
@@ -68,21 +73,15 @@
     margin-top:rem(50);
     @include mq('md'){
         margin-top:rem(40);
+        margin-left:rem(101);
     }
 }
 .about__container{
     position:relative;
     margin-top:rem(29);
-}
-.about__text-wrap{
     @include mq('md'){
-        position:absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display:flex;
+    margin-top:rem(40);
     }
-    
 }
 .about__text-body{
     @include mq('md'){

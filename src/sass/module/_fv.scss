@@ -32,6 +32,9 @@
     text-align:center;
     @include mq('md'){
         font-size:rem(80);
+        left:52%;
+        top:49%;
+        transform: translate(-51%,-50%);
     }
 }
 .fv__title-small{
@@ -45,4 +48,7 @@
     transform: translate(-50%,-50%);
     z-index: 10; 
     text-align:center;
+    @include mq('md'){
+        top: 57%;
+    }
 }

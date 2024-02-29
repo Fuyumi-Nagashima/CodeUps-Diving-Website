@@ -3,7 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
-
+html,body{
+  overflow-x: hidden;
+}
 /* Remove default padding */
 ul,
 ol {

@@ -49,3 +49,6 @@
 .pc-nav__item:last-child .pc-nav__link:hover::before{
     width: calc(100% - 20px); /* リンクの幅全体に下線を表示 */
 }
+.pc-nav__item:nth-child(7) .pc-nav__link {
+    text-transform:uppercase;
+}

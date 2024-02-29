@@ -1,8 +1,5 @@
 @use "global" as *;
 /*swiper*/
-.topCampaign{
-    overflow-x:hidden;
-}
 .inner.topCampaign__inner{
     margin: auto;
     max-width: rem(600);
@@ -29,11 +26,12 @@
     }
 }
 .topCampaign__btn{
-    margin-left:rem(68);
+    justify-content: center;
+    display: flex;
     margin-top: rem(38);
     @include mq('md'){
     margin-top: rem(80);
-    }
+}
 }
 
 //swiperのボタン
@@ -45,11 +43,14 @@
     @include mq('md'){
         display:flex;
         justify-content: flex-end;
+        position:absolute;
+        right:12%;
+        top:3%;
     }   
 }
 .topCampaign__btn-wrap .swiper-button-next {
     @include mq('md'){
-        margin-left: rem(80);
+        margin-left: rem(96);
     }
 }
 .topCampaign__btn-wrap .swiper-button-prev,
@@ -92,7 +93,6 @@
     @include mq('md'){
         transition:all 0.3s; 
     }
-    
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover{
