@@ -7,6 +7,7 @@
     @include mq('md'){
         order:1;
         width:46%;
+        margin-top:0;
     }
 }
 .price__image .color{
@@ -38,7 +39,7 @@
     justify-content:center;
     margin-top:rem(40);
     @include mq('md'){
-        margin-top:rem(80);
+        margin-top:rem(72);
     }
 }
 .price__wrapper{

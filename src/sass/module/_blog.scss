@@ -3,7 +3,6 @@
     display:none;
     @include mq('md'){
         display:block; 
-        // position:relative;
     }
 }
 .blog__background img{
@@ -24,7 +23,7 @@
 .section-title.blog__section-title{
     @include mq('md'){
         position:absolute;
-        top:100px;
+        top:131px;
         left:50%;
         transform:translate(-50%,-50%);
     }

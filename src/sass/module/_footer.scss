@@ -2,6 +2,10 @@
 .inner.footer__inner{
     padding-left: rem(14);
     padding-right: rem(14);
+    @include mq('md'){
+        padding-left: rem(25);
+        padding-right: rem(25);
+    }
 }
 .footer__top{
     @include mq('md'){
@@ -46,7 +50,7 @@
     text-align: center;
     margin-top:rem(32);
     @include mq('md'){
-        margin-top:rem(80);
+        margin-top:rem(75);
     }
 }
 .footer__copyright small{
@@ -57,4 +61,9 @@
     font-weight: 100;
     text-transform: capitalize;
     text-align: center;
+    @include mq('md'){
+        font-size:rem(14);
+    line-height: calc(18/14);
+    
+    }
 }

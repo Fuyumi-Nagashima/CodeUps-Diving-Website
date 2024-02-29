@@ -12,6 +12,9 @@
 }
 .blog-list__body{
     margin-top: rem(18);
+    @include mq('md'){
+    margin-top: rem(10);
+    }
 }
 .blog-list__date{
     font-size: rem(12);
