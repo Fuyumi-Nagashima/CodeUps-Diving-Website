@@ -42,11 +42,8 @@
     margin-top:rem(24);
     margin-top: rem(31);
     @include mq('md'){
-        // position: relative;
         grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
         column-gap:rem(40);
-        margin-top:0;
-        // top: -247px;
     }
 }
 .section-title .blog__section-title{

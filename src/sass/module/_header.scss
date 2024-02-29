@@ -1,7 +1,7 @@
 @use "global" as *;
 .header{
     position: fixed;
-    background-color:rgba(0, 0, 0, 0.25);
+    background-color:rgba(13, 41, 54, 0.68);
     height:rem(80) ;
     width: 100%;
     @include mq('md'){
@@ -36,8 +36,4 @@
 }
 .header__pc-nav{
     height:inherit;
-}
-.header.change-color {
-    background-color: #00cc99; //スクロールしたあとのヘッダー背景色
-    transition: 0.3s;
 }

@@ -11,7 +11,7 @@
     font-size: rem(18);
     height: inherit;
     line-height: 1;
-    padding: 0 rem(20); /* 元の padding をそのまま指定 */
+    padding: 0 rem(20);
     color: $white;
     text-transform: capitalize;
     display: flex;
@@ -20,7 +20,7 @@
     justify-content: center;
     font-family: $english-font-family;
     position: relative;
-    overflow: hidden; /* リンクの幅を超える部分を隠す */
+    overflow: hidden; 
 }
 .pc-nav__item:last-child a{
     padding-right:0;
@@ -44,10 +44,10 @@
     
 }
 .pc-nav__link:hover::before{
-    width: calc(100% - rem(40)); /* リンクの幅からpaddingを除いた幅を設定 */
+    width: calc(100% - rem(40)); 
 }
 .pc-nav__item:last-child .pc-nav__link:hover::before{
-    width: calc(100% - 20px); /* リンクの幅全体に下線を表示 */
+    width: calc(100% - 20px); 
 }
 .pc-nav__item:nth-child(7) .pc-nav__link {
     text-transform:uppercase;

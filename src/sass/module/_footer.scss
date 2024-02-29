@@ -63,7 +63,6 @@
     text-align: center;
     @include mq('md'){
         font-size:rem(14);
-    line-height: calc(18/14);
-    
+        line-height: calc(18/14);
     }
 }
