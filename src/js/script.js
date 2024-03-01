@@ -40,11 +40,11 @@ jQuery(function ($) {
       //campaignスライダー
       var topCampaign_swiper = new Swiper(".js-topCampaign-slider", {
         loop: true,
-        speed: 2000,
+        speed: 4000,
         slidesPerView: "auto",
         spaceBetween: 24,
         autoplay: {
-          delay: 2000,
+          delay: 4000,
           disableOnInteraction: false,
         },
         breakpoints: {
@@ -115,7 +115,7 @@ jQuery(function ($) {
 // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
       $("#js-pagetop").css({
         position: "absolute",
-        bottom: footHeight + 20,
+        bottom: footHeight + 18,
       });
     } else {
       $("#js-pagetop").css({

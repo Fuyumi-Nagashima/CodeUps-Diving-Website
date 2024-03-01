@@ -39,11 +39,11 @@
 .blog__content{
     display:grid;
     row-gap:rem(40);
-    margin-top:rem(24);
-    margin-top: rem(31);
+    margin-top:rem(28);
     @include mq('md'){
         grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
         column-gap:rem(40);
+        margin-top:0;
     }
 }
 .section-title .blog__section-title{

@@ -1,6 +1,6 @@
 @use "global" as *;
 .information__container{
-    margin-top: rem(24);
+    margin-top: rem(28);
     @include mq('md'){
         display:flex;
         align-items: center;
