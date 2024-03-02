@@ -12,10 +12,10 @@
 .fv__swiper,
 .fv__swiper-slide picture,
 .fv__swiper-slide img{
-    height:inherit;
-}
-.fv__swiper-slide img{
     object-fit:cover;
+    height:100vh;
+    @include mq('md'){
+    }
 }
 .fv__title-large{
     font-size:rem(40);

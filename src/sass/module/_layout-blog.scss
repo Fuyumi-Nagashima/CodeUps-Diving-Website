@@ -8,7 +8,7 @@
 }
 .layout-blog::after{
     @include mq('md'){
-        background: url(/assets/images/common/top-blog-icon.png) no-repeat;
+        background: url(../images/common/top-blog-icon.png) no-repeat;
         background-size:contain;
         top: 25px;
         content: "";
