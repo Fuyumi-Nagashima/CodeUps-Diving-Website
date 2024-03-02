@@ -1,0 +1,7 @@
+AuthUserFile /home/xs167762/mimi-web.com/public_html/codeups/.htpasswd
+AuthName "hogehoge"
+AuthType Basic
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
