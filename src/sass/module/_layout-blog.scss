@@ -3,18 +3,31 @@
     padding-top:rem(80);  
     @include mq('md'){
         position: relative;
-        padding-top:0; 
+        padding-top:rem(100); 
     }
 }
 .layout-blog::after{
     @include mq('md'){
-        background: url(../images/common/top-blog-icon.png) no-repeat;
-        background-size:contain;
-        top: 25px;
+        background: url(../images/common/top-blog-bg.jpg) no-repeat;
+        background-size: cover;
         content: "";
-        height: rem(201);
+        height: rem(500);
+        left: 0;
+        z-index: -1;
+        width: 100%;
         position: absolute;
-        left: 100px;
+        top: 0;
+    }
+}
+.layout-blog::before{
+    @include mq('md'){
+        background: url(../images/common/top-blog-icon.png) no-repeat;
+        content: "";
+        position: absolute;
+        background-size: cover;
         width: rem(437);
+        height:rem(201);
+        left: 7%;
+        top: 3%;
     }
 }

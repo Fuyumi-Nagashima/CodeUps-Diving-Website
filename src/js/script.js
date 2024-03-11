@@ -3,10 +3,19 @@ jQuery(function ($) {
     $(".js-hamburger").on("click", function () {
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
+        $("body").toggleClass("active");
     });
     $(".js-drawer a[href]").on("click", function () {
         $(".js-hamburger").trigger("click");
     });
+    
+    /*$(window).resize(function () {
+      if ($(window).width() > 768) {
+        $(".js-hamburger").removeClass("is-active");
+        $(".js-drawer").fadeOut();
+      }
+    });*/
+
       //ハンバーガーメニューを開いている時のスクロールを禁止する(背景固定)
     var state = false;
     var pos;
@@ -38,13 +47,13 @@ jQuery(function ($) {
       });
     
       //campaignスライダー
-      var topCampaign_swiper = new Swiper(".js-topCampaign-slider", {
+      var topCampaign_swiper = new Swiper(".js-campaign-swiper", {
         loop: true,
-        speed: 4000,
+        speed: 3000,
         slidesPerView: "auto",
         spaceBetween: 24,
         autoplay: {
-          delay: 4000,
+          delay: 3000, 
           disableOnInteraction: false,
         },
         breakpoints: {

@@ -3,8 +3,8 @@
     padding-left: rem(14);
     padding-right: rem(14);
     @include mq('md'){
-        padding-left: rem(25);
-        padding-right: rem(25);
+        padding-left:25px;
+        padding-right:25px;
     }
 }
 .footer__top{
@@ -41,9 +41,11 @@
 }
 .footer__nav{
     margin-top:rem(40);
+    display: grid;
+    place-items: center;
     @include mq('md'){
         margin-top: rem(24);
-    
+        display:block;
     }
 }
 .footer__copyright{

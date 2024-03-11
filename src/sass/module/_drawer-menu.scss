@@ -10,7 +10,13 @@
     background: $main-green;
     overflow-y: scroll;
     scrollbar-width: none;
+    @include mq('md'){
+        display:block;
+    }
 }
+/*.header__drawer-menu.drawer-menu.is-active {
+    display: block;
+}*/
 .drawer-menu__inner {
     padding-left: rem(15);
     padding-right: rem(15);
@@ -28,6 +34,7 @@
 .drawer-menu__content{
     margin-top: rem(43); 
     display:flex;
+    justify-content: center;
     gap:rem(7) ; 
 }
 .drawer-menu__items{

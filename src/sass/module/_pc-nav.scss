@@ -22,6 +22,9 @@
     position: relative;
     overflow: hidden; 
 }
+.pc-nav__link:hover{
+    opacity:2;
+}
 .pc-nav__item:last-child a{
     padding-right:0;
 }

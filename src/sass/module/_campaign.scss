@@ -1,34 +1,24 @@
 @use "global" as *;
 /*swiper*/
-.inner.topCampaign__inner{
+.inner.campaign__inner{
     margin: auto;
-    max-width: rem(600);
     width: 100%;
     @include mq(md){
-        padding: 0 rem(25);
         max-width: rem(1130);
     }
 }
-.topCampaign__swiper-container {
+.campaign__swiper {
     margin-right: calc(50% - 50vw);
     width: 100vw;
+    margin-top:rem(24);
+    @include mq('md'){
+            margin-top:rem(40);
+    }
 }
-.topCampaign__slide{
-    width: rem(280);
+.campaign-swiper__wrapper{
     padding-bottom:rem(4);
-    padding-right:rem(4);   
-    padding-left:rem(4);
-    @include mq('md'){
-        width: rem(333);
-    }
 }
-.topCampaign__swiper-container{
-    margin-top:rem(30);
-    @include mq('md'){
-        margin-top:rem(40);
-    }
-}
-.topCampaign__btn{
+.campaign__btn{
     justify-content: center;
     display: flex;
     margin-top: rem(38);
@@ -42,22 +32,23 @@
 .swiper-button-next::after {
     content: "";
 }
-.topCampaign__btn-wrap{
+.campaign__btn-wrap{
     @include mq('md'){
         display:flex;
         justify-content: flex-end;
         position:absolute;
         right:12%;
-        top:3%;
+        top:-2%;
+        height:rem(80);
     }   
 }
-.topCampaign__btn-wrap .swiper-button-next {
+.campaign__btn-wrap .swiper-button-next {
     @include mq('md'){
         margin-left: rem(96);
     }
 }
-.topCampaign__btn-wrap .swiper-button-prev,
-.topCampaign__btn-wrap .swiper-button-next {
+.campaign__btn-wrap .swiper-button-prev,
+.campaign__btn-wrap .swiper-button-next {
     @include mq('md'){
         position: relative;
         width: rem(80);
@@ -68,8 +59,8 @@
         transition: all 0.3s; 
     }   
 }
-.topCampaign__btn-wrap .swiper-button-prev::before,
-.topCampaign__btn-wrap .swiper-button-next::before {
+.campaign__btn-wrap .swiper-button-prev::before,
+.campaign__btn-wrap .swiper-button-next::before {
     @include mq('md'){
         content: "";
         position: absolute;
@@ -80,12 +71,12 @@
     }
     
 }
-.topCampaign__btn-wrap .swiper-button-prev::before {
+.campaign__btn-wrap .swiper-button-prev::before {
     @include mq('md'){
         background-image:url(../images/common/prev-arrow.png);
     }
 }
-.topCampaign__btn-wrap .swiper-button-next::before {
+.campaign__btn-wrap .swiper-button-next::before {
     @include mq('md'){
         background-image:url(../images/common/next-arrow.png)
     }
@@ -104,8 +95,8 @@
     }
     
 }
-.topCampaign__btn-wrap .swiper-button-prev:hover::before,
-.topCampaign__btn-wrap .swiper-button-next:hover::before {
+.campaign__btn-wrap .swiper-button-prev:hover::before,
+.campaign__btn-wrap .swiper-button-next:hover::before {
     @include mq('md'){
     filter: brightness(0) invert(1);
     }

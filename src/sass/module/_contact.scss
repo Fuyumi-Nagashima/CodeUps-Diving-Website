@@ -3,8 +3,8 @@
     padding-right:rem(40);
     padding-left:rem(40);
     @include mq('md'){
-        padding-right:rem(25);
-        padding-left:rem(25);
+        padding-right:25px;
+        padding-left:25px;
     }
 }
 .contact__logo{
