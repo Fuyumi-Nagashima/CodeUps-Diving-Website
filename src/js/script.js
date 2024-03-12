@@ -8,13 +8,14 @@ jQuery(function ($) {
     $(".js-drawer a[href]").on("click", function () {
         $(".js-hamburger").trigger("click");
     });
-    
-    /*$(window).resize(function () {
-      if ($(window).width() > 768) {
+ 
+    //768px以上でドロワーを非表示にする
+    $(window).on('resize', function() {
+      if (window.matchMedia("(min-width: 768px)").matches) {
         $(".js-hamburger").removeClass("is-active");
         $(".js-drawer").fadeOut();
       }
-    });*/
+    });
 
       //ハンバーガーメニューを開いている時のスクロールを禁止する(背景固定)
     var state = false;

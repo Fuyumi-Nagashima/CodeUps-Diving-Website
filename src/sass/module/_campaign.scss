@@ -28,6 +28,7 @@
 }
 
 //swiperのボタン
+//swipeナビボタンのデフォルト矢印打消し
 .swiper-button-prev::after,
 .swiper-button-next::after {
     content: "";
@@ -35,7 +36,6 @@
 .campaign__btn-wrap{
     @include mq('md'){
         display:flex;
-        justify-content: flex-end;
         position:absolute;
         right:12%;
         top:-2%;
@@ -47,8 +47,8 @@
         margin-left: rem(96);
     }
 }
-.campaign__btn-wrap .swiper-button-prev,
-.campaign__btn-wrap .swiper-button-next {
+.campaign-prev,
+.campaign-next{
     @include mq('md'){
         position: relative;
         width: rem(80);
@@ -59,8 +59,8 @@
         transition: all 0.3s; 
     }   
 }
-.campaign__btn-wrap .swiper-button-prev::before,
-.campaign__btn-wrap .swiper-button-next::before {
+.campaign__btn-wrap .campaign-prev::before,
+.campaign__btn-wrap .campaign-next::before {
     @include mq('md'){
         content: "";
         position: absolute;
@@ -70,33 +70,27 @@
         background-repeat:no-repeat;
     }
     
-}
-.campaign__btn-wrap .swiper-button-prev::before {
+} 
+.campaign__btn-wrap .campaign-prev::before {
     @include mq('md'){
         background-image:url(../images/common/prev-arrow.png);
     }
 }
-.campaign__btn-wrap .swiper-button-next::before {
+.campaign__btn-wrap .campaign-next::before {
     @include mq('md'){
         background-image:url(../images/common/next-arrow.png)
     }
     
 }
-.swiper-button-prev,
-.swiper-button-next{
-    @include mq('md'){
-        transition:all 0.3s; 
-    }
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover{
+.campaign-next:hover,
+.campaign-prev:hover{
     @include mq('md'){
         background-color:$main-green;
     }
     
 }
-.campaign__btn-wrap .swiper-button-prev:hover::before,
-.campaign__btn-wrap .swiper-button-next:hover::before {
+.campaign__btn-wrap .campaign-prev:hover::before,
+.campaign__btn-wrap .campaign-next:hover::before {
     @include mq('md'){
     filter: brightness(0) invert(1);
     }
