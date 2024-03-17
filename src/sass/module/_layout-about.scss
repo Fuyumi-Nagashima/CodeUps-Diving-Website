@@ -1,22 +1,8 @@
 @use "global" as *;
 .layout-about{
-    padding-top:rem(80); 
-    padding-bottom:rem(76);
+    margin-top: rem(80);
     @include mq('md'){
-        position:relative;
-        padding-top:rem(140);
-        padding-bottom:rem(164);
+        margin-top: rem(140);
     }
 }
-.layout-about::after{
-    @include mq('md'){
-        position: absolute;
-        content: "";
-        right: 83px;
-        bottom:67px;
-        height:rem(181);
-        width:rem(194);
-        background:url(../images/common/about-us-icon.png) no-repeat;
-        background-size:contain;
-}
-}
+

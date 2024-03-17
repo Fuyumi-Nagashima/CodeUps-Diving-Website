@@ -1,8 +1,7 @@
 @use "global" as *;
 .btn {
     position:relative;
-    justify-content: center;
-    display: flex;
+    display:inline-flex;
     color:$white;
     align-items: center;
     cursor: pointer;
@@ -14,6 +13,7 @@
     font-family: $english-font-family;
     color: white;
     padding: rem(16) rem(40);
+    margin-bottom:rem(4);
     background-color:$main-green;
     z-index:1;
     }

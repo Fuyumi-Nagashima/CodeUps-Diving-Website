@@ -27,7 +27,7 @@
         background-size: cover;
         width: rem(437);
         height:rem(201);
-        left: 7%;
+        left: calc(50% - min(43vw, rem(620)));
         top: 3%;
     }
 }

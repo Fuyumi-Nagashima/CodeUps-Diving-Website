@@ -9,21 +9,22 @@
 }
 .campaign__swiper {
     margin-right: calc(50% - 50vw);
-    width: 100vw;
-    margin-top:rem(24);
+    overflow-x:hidden;
+    // width: 100vw;
+    margin-top:rem(27);
     @include mq('md'){
             margin-top:rem(40);
     }
 }
 .campaign-swiper__wrapper{
-    padding-bottom:rem(4);
+    padding-bottom:rem(10);
+    padding-left:rem(2);
 }
 .campaign__btn{
-    justify-content: center;
-    display: flex;
-    margin-top: rem(38);
+    text-align:center;
+    margin-top: rem(30);
     @include mq('md'){
-    margin-top: rem(80);
+    margin-top: rem(66);
 }
 }
 

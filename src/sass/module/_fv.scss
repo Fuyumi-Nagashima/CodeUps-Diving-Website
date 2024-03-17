@@ -17,24 +17,23 @@
     @include mq('md'){
     }
 }
+.fv__title-wrap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+}
 .fv__title-large{
     font-size:rem(40);
     font-family:$english-font-family;
     letter-spacing:0.54em;
+    text-indent:0.54em;
     text-transform:uppercase;
     color:$white;
     line-height:1;
-    position: absolute;
-    top: 48%;
-    left: 53%;
-    transform: translate(-50%,-50%);
-    z-index: 10; 
-    text-align:center;
     @include mq('md'){
         font-size:rem(80);
-        left:52%;
-        top:49%;
-        transform: translate(-51%,-50%);
     }
 }
 .fv__title-small{
@@ -42,13 +41,5 @@
     font-family:$english-font-family;
     color:$white;
     font-weight:300;
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 10; 
     text-align:center;
-    @include mq('md'){
-        top: 57%;
-    }
 }

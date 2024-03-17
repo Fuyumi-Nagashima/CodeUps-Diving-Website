@@ -40,6 +40,11 @@ body {
   line-height: 1.5;
   position:relative;
 }
+body.js-fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul,

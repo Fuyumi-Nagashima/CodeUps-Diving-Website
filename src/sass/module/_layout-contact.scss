@@ -1,18 +1,16 @@
 @use "global" as *;
 .layout-contact{
-    padding-top:rem(81);
-    padding-bottom:rem(100);
+    margin-top:rem(80);
     position:relative;
     @include mq('md'){
-        padding-top:rem(162);
-        padding-bottom:rem(160);
+        margin-top:rem(140);
     }
 }
 .layout-contact::before{
         position: absolute;
         content: "";
         right:4%;
-        top:7%;
+        top:-4%;
         height:rem(50);
         width:rem(109);
         background:url(../images/common/contact-icon.png) no-repeat;
@@ -20,7 +18,7 @@
         @include mq('md'){
             height:rem(138);
             width:rem(301);
-            top:15%;
-            right:4%;        
+            top:-10%;
+            right: calc(50% - min(48vw, rem(662)));    
         }
 }

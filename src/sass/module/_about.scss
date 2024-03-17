@@ -2,6 +2,23 @@
 .about__section-title .section-title__primary span{
     text-transform: lowercase;
 }
+.about__inner{
+    @include mq('md'){
+        position:relative;
+    }
+}
+.about__inner::after{
+    @include mq('md'){
+        position: absolute;
+        content: "";
+        right:calc(50% - min(48vw,rem(638)));
+        bottom:rem(-96);
+        height:rem(181);
+        width:rem(194);
+        background:url(../images/common/about-us-icon.png) no-repeat;
+        background-size:contain;
+}
+}
 .about__image01{
     width: 37%;
     min-width: rem(128);        
@@ -69,11 +86,10 @@
     }
 }
 .about__btn{
-    margin-left:rem(62);
+    text-align:center;
     margin-top:rem(50);
     @include mq('md'){
         margin-top:rem(40);
-        margin-left:rem(101);
     }
 }
 .about__container{
