@@ -1,4 +1,4 @@
-@use "global" as *;
+@use "global" as *; 
 .header{
     position: fixed;
     background-color:rgba(13, 41, 54, 0.68);
@@ -6,9 +6,14 @@
     width: 100%;
     top: 0;
     z-index: 4000;
+    transition:background-color, 0.5s;
     @include mq('md'){
         height:rem(90) ;
     }
+}
+.header.is-active{
+    background-color:$main-green;
+    transition:0.5s;
 }
 .header__inner{
     padding-left: rem(15);

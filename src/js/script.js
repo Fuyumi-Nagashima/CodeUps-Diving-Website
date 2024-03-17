@@ -1,7 +1,7 @@
 "use strict";
 jQuery(function ($) {
     $(".js-hamburger").on("click", function () {
-        $(".js-hamburger").toggleClass("is-active");
+        $(".js-hamburger,.header").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
         $("body").toggleClass("active");
     });
