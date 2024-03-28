@@ -39,7 +39,7 @@
         display:flex;
         position:absolute;
         right:12%;
-        top:-2%;
+        top:0;
         height:rem(80);
     }   
 }
@@ -51,7 +51,8 @@
 .campaign-prev,
 .campaign-next{
     @include mq('md'){
-        position: relative;
+        position: initial;
+        margin-top:0;/*デフォルト打消し*/
         width: rem(80);
         height:rem(80);
         background-color:$white;

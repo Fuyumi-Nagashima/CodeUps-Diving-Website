@@ -17,7 +17,8 @@
 .drawer-menu__inner {
     padding-left: rem(15);
     padding-right: rem(37);
-    height: inherit;
+    height: calc(100vh - 80px);
+    overflow:scroll;
 }
 .drawer-menu__logo img {
     max-width: rem(102);
@@ -29,10 +30,11 @@
     display:none;
 }
 .drawer-menu__content{
-    margin-top: rem(24); 
     display:flex;
     justify-content: center;
     gap:rem(7) ; 
+    padding-top:rem(24);
+    padding-bottom:rem(24);
 }
 .drawer-menu__items{
     display: grid;

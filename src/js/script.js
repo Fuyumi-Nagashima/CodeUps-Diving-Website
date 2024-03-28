@@ -8,7 +8,7 @@ jQuery(function ($) {
     $(".js-drawer a[href]").on("click", function () {
         $(".js-hamburger").trigger("click");
     });
- 
+
     //768px以上でドロワーを非表示にする
     $(window).on('resize', function() {
       if (window.matchMedia("(min-width: 768px)").matches) {
