@@ -21,11 +21,12 @@
 }
 .about__image01{
     width: 37%;
-    min-width: rem(128);        
+    min-width: rem(128);   
+    position:relative;
+    z-index: 1;     
 }
 .about__image02{
     position:relative;
-    z-index:-1;
     margin-left:auto;
     width:81%;
     min-width: rem(281);
@@ -52,6 +53,7 @@
 }
 .about__text-wrap{
     margin-top: rem(40);
+    z-index: 1;     
     @include mq('md'){
         margin-top:0;
         position:absolute;
