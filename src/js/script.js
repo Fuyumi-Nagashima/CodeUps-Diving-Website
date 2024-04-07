@@ -70,7 +70,7 @@ jQuery(function ($) {
       });
     
       //色壁が出て写真が出てくるアニメーション,
-      var box = $(".information__image,.voice-item__image,.price__image"),
+      var box = $(".information__image,.voice-card__image,.price__image"),
         speed = 700;
     
       box.each(function () {
