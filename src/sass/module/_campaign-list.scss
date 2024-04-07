@@ -1,10 +1,4 @@
 @use "global" as *;
-.campaign__slide{
-    width: rem(280);
-    @include mq('md'){
-        width: rem(334);
-    }
-}
 .campaign-list{
     box-shadow:2px 2px 10px 0px rgba(0, 0, 0, 0.25);   
     display:flex;
@@ -23,7 +17,7 @@
     aspect-ratio:333/223;
     }
 }
-.campaign__body{
+.campaign-list__body{
     padding: rem(16) rem(16) rem(24);
     background-color:$white;
     display:flex;
