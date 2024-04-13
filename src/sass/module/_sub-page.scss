@@ -1,0 +1,16 @@
+@use "global" as *;
+.sub-page__head{
+    margin-top:rem(52);
+    @include mq('md'){
+    margin-top:rem(150);
+    }
+}
+.sub-page__title{
+    font-size: rem(24);
+    line-height: calc(35/24);
+    font-weight: $medium;
+    @include mq('md'){
+    font-size: rem(32);
+    line-height: calc(46/32);
+    }
+}

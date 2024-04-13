@@ -1,0 +1,7 @@
+@use "global" as *;
+.page-sitemap__title{
+    text-transform:capitalize;
+}
+.page-sitemap__title span:nth-child(2){
+    text-transform:uppercase;
+}

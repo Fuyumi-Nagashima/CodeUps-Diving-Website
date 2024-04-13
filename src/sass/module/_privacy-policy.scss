@@ -1,0 +1,21 @@
+@use "global" as *;
+.inner.privacy-policy__inner{
+    max-width: rem(850);
+    width: 100%;
+} 
+.privacy-policy__wrapper{
+    margin-top:rem(40);
+    display:grid;
+    font-size:rem(16);
+    line-height:calc(32/16);
+    gap:rem(31);
+}
+.privacy-policy__content ol{
+    padding-left:rem(23);
+}
+.privacy-policy__text{
+    font-size: rem(16);
+    line-height: calc(32/16);
+    letter-spacing:normal;
+    margin-top:rem(35);
+}

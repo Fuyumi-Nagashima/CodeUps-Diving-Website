@@ -1,0 +1,23 @@
+@use "global" as *;
+.inner.terms-of-service__inner{
+    max-width: rem(850);
+    width: 100%;
+}       
+.terms-of-service__wrapper{
+    margin-top:rem(40);
+}
+.terms-of-service__wrapper p,
+.terms-of-service__content li{
+    font-size: rem(16);
+    line-height: calc(32/16);
+}
+.terms-of-service__content{
+    margin-top:rem(31);
+    padding-left:rem(23);
+}
+.terms-of-service__text{
+    margin-top: rem(34);
+    font-size: rem(16);
+    line-height:calc(32/16);
+}
+

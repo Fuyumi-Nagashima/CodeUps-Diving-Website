@@ -1,0 +1,11 @@
+@use "global" as *;
+.pagethanks-mv{
+    height:rem(460);
+    background-image: url(../images/common/page-contact-sp-mv.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq('md'){
+    height:rem(548);
+    background-image: url(../images/common/page-contact-pc-mv.jpg);
+}
+}

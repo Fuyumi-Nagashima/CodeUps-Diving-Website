@@ -1,0 +1,12 @@
+@use "global" as *;
+.thankspage-footer{
+    background-color: #408F95;
+    margin-top:rem(144);
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    @include mq('md'){
+    margin-top:rem(120);
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    }
+}

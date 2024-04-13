@@ -1,0 +1,9 @@
+@use "global" as *;
+.page404-footer{
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    background-color:$main-green;
+    @include mq('md'){ 
+        padding:rem(80) 0;
+    }
+}

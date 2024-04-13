@@ -1,0 +1,27 @@
+@use "global" as *;
+.layout-page-404{
+    padding: rem(39) 0 rem(40) 0;
+    background-color:$main-green;
+    text-align: center;
+    position: relative;
+    @include mq('md'){
+        padding: rem(109) 0 rem(148) 0;
+    }
+}
+.layout-page-404::before{
+    content: '';
+    position:absolute;
+    background-image: url(../images/common/404image.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width: rem(345);
+    height: rem(345);
+    top:-10%;
+    left:4%;
+    @include mq('md'){
+        top: -6%;
+        width:rem(698);
+        height:rem(698);
+        left: calc(50% - min(38vw, 541px));
+    }
+}

@@ -1,0 +1,23 @@
+@use "global" as *;
+.sub-mv__page-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:rem(206);
+    @include mq('md'){
+    padding-top:rem(274);
+    }
+}
+.sub-mv__title{
+    color: $white;
+    font-size:clamp(40px, 6vw, 80px);
+    line-height: calc(48/40);
+    font-weight: $regular;
+    font-family:$number-font-family ;
+    @include mq('md'){
+    line-height: calc(100/80);
+    }
+}
+.sub-mv__title span{
+    text-transform: capitalize;
+}

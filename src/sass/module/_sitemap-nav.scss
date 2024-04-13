@@ -1,0 +1,38 @@
+@use "global" as *;
+.sitemap-nav__heading{
+    position: relative;
+    color:$font-color;
+}
+.sitemap-nav__list li{
+    color:$font-color;
+}
+.sitemap-nav__heading::before{
+    content: "";
+    position: absolute;
+    background-position:left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left:0;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/sitemap-icon.png) ;
+}
+.sitemap-nav__content{
+    column-gap:rem(16) ; 
+    row-gap:rem(33);
+    display: grid;
+    grid-template-columns:rem(168) rem(150);
+    grid-template-rows:1fr 1fr;
+    grid-template-areas:
+    "item01 item03"
+    "item02 item04"
+    ;
+    @include mq('md'){
+        column-gap:rem(115) ; 
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+    "item01 item02 item03 item04" ;
+    }
+}
+

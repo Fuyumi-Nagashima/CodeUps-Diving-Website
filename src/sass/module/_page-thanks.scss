@@ -1,0 +1,20 @@
+@use "global" as *;
+.page-thanks__container{
+    text-align: center;
+    margin-top:rem(52); 
+    @include mq('md'){
+    margin-top:rem(150); 
+    }
+}
+.page-thanks__title{
+    font-size: rem(16);
+    line-height: calc(18/16);
+    letter-spacing:normal;
+    font-weight:normal;
+}
+.page-thanks__message{
+    margin-top: rem(40);
+    font-size: rem(16);
+    line-height: calc(23/16);
+    letter-spacing:normal;
+}
