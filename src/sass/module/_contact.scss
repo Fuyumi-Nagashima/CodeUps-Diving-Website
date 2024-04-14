@@ -1,10 +1,10 @@
 @use "global" as *;
-.inner.contact__inner{
+.contact__inner{
     padding-right:rem(40);
     padding-left:rem(40);
     @include mq('md'){
-        padding-right:25px;
-        padding-left:25px;
+        padding-right:rem(25);
+        padding-left:rem(25);
     }
 }
 .contact__logo{
@@ -25,17 +25,17 @@
         width: 100%;
     }
 }
-.section-title.contact__section-title p{
+.section-title__sub.section-title__sub--contact{
     @include mq('md'){
         font-size:rem(12);
-        line-hight:calc(18/12);
+        line-height:calc(18/12);
         margin-top:0;
-        margin-top: 0;
     }
 }
 .contact__container{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     @include mq('md'){
+        filter: none; /* filter プロパティをリセット */
         display: flex;
         align-items:center;
         padding:rem(80) rem(112) rem(80) rem(50);
@@ -112,9 +112,6 @@
     color:$main-green;
     text-align: center;
     margin-top:rem(8);
-    @include mq('md'){
-    margin-top:0;
-    }
 }
 .contact__btn{
     text-align:center;

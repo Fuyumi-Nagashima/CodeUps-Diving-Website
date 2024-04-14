@@ -1,10 +1,10 @@
 @use "global" as *;
-.inner.blog__inner{
+.blog__inner{
     padding-right:rem(21);
     padding-left:rem(21);
     @include mq('md'){
-        padding-right:25px;
-        padding-left:25px;   
+        padding-right:rem(25);
+        padding-left:rem(25);   
     }
 }
 .blog__btn{
@@ -25,13 +25,7 @@
         //grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
     }
 }
-.section-title .blog__section-title{
-    color:$white;
-    @include mq('md'){
-        color:$main-green;
-    }
-}
-.blog__section-title .section-title__primary::first-letter{
+.section-title__primary--white::first-letter{
     @include mq('md'){
         color:$white;
     }

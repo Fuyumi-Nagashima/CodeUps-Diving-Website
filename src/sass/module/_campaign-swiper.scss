@@ -1,0 +1,11 @@
+@use "global" as *;
+.campaign-swiper__wrapper{
+    padding-bottom:rem(10);
+    padding-left:rem(2);
+}
+.campaign-swiper__slide{
+    width: rem(280);
+    @include mq('md'){
+        width: rem(334);
+    }
+}

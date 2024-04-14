@@ -40,7 +40,7 @@
             <img src="./assets/images/common/latest-logo.svg" alt="codeupsのロゴ画像"/>
           </a>
         </h1>
-        <div class="hamburger u-mobile js-hamburger">
+        <div class="header__hamburger hamburger u-mobile js-header-header__hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -136,16 +136,9 @@
       <!-- fv -->
       <div class="fv">
         <div class="fv__inner">
-          <div
-            class="swiper fv__swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden"
-          >
-            <div
-              class="swiper-wrapper fv__swiper-wrapper"
-              id="swiper-wrapper-38cb4ffe3ab76861"
-              aria-live="off"
-              style="transition-duration: 0ms; transition-delay: 0ms"
-            >
-              <div class="swiper-slide fv__swiper-slide swiper-slide-next">
+          <div class="swiper fv__swiper js-fv__swiper">
+            <div class="swiper-wrapper fv__swiper-wrapper">
+              <div class="swiper-slide fv__swiper-slide">
                 <picture>
                   <source
                     srcset="./assets/images/common/top-fv-sp01.webp"
@@ -191,7 +184,7 @@
                   />
                 </picture>
               </div>
-              <div class="swiper-slide fv__swiper-slide swiper-slide-prev">
+              <div class="swiper-slide fv__swiper-slide">
                 <picture>
                   <source
                     srcset="./assets/images/common/top-fv-sp03.webp"
@@ -214,7 +207,7 @@
                   />
                 </picture>
               </div>
-              <div class="swiper-slide fv__swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active">
+              <div class="swiper-slide fv__swiper-slide ">
                 <picture>
                   <source
                     srcset="./assets/images/common/top-fv-sp04.webp"
@@ -242,11 +235,7 @@
               <p class="fv__title-large">diving</p>
               <p class="fv__title-small">into&nbsp;the&nbsp;ocean</p>
             </div>
-            <span
-              class="swiper-notification"
-              aria-live="assertive"
-              aria-atomic="true"
-            ></span>
+            
           </div>
         </div>
       </div>
@@ -259,14 +248,14 @@
           </div>
           <!-- ボタン -->
           <div class="campaign__btn-wrap">
-            <div class="swiper-button-prev campaign-prev js-campaign-arrow"></div>
-            <div class="swiper-button-next campaign-next js-campaign-arrow"></div>
+            <div class="swiper-button-prev campaign__prev  js-campaign-arrow"></div>
+            <div class="swiper-button-next campaign__next  js-campaign-arrow"></div>
           </div>
-          <!-- スライドの内容をここに入れ込む -->
+          <!-- スライド-->
           <div class="campaign__swiper campaign-swiper">
             <div class="swiper js-campaign-swiper">
               <ul class="swiper-wrapper campaign-swiper__wrapper ">
-                <li class="swiper-slide campaign__slide campaign-list">
+                <li class="swiper-slide campaign-swiper__slide campaign-list">
                   <a href="#">
                     <figure class="campaign-list__image">
                       <picture>
@@ -285,7 +274,7 @@
                     </div>
                   </a>
                 </li><!-- スライド1終わりここまで -->
-                <li class="campaign__slide campaign-list swiper-slide">
+                <li class="campaign-swiper__slide campaign-list swiper-slide">
                   <a href="#">
                     <figure class="campaign-list__image">
                       <picture>
@@ -304,7 +293,7 @@
                     </div>
                   </a>
                 </li><!-- スライド1終わりここまで -->
-                <li class="campaign__slide campaign-list swiper-slide">
+                <li class="campaign-swiper__slide campaign-list swiper-slide">
                   <a href="#">
                     <figure class="campaign-list__image">
                       <picture>
@@ -323,7 +312,7 @@
                     </div>
                   </a>
                 </li><!-- スライド1終わりここまで -->
-                <li class="campaign__slide campaign-list swiper-slide">
+                <li class="campaign-swiper__slide campaign-list swiper-slide">
                   <a href="#">
                     <figure class="campaign-list__image">
                       <picture>
@@ -343,7 +332,7 @@
                   </a>
                 </li>
                 <!-- swiper動作確認用のスライド追加 -->
-                <li class="campaign__slide campaign-list swiper-slide">
+                <li class="campaign-swiper__slide campaign-list swiper-slide">
                   <a href="#">
                     <figure class="campaign-list__image">
                       <picture>
@@ -571,7 +560,7 @@
               <div class="voice-card__wrap">
                 <div class="voice-card__head">
                     <p class="voice-card__profile">20代(女性)</p>
-                    <span class="voice__category?? campaign-list__category">ライセンス講習</span>
+                    <span class="voice-card__category">ライセンス講習</span>
                   <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
                 <figure class="voice-card__image color">
@@ -593,7 +582,7 @@
               <div class="voice-card__wrap">
                 <div class="voice-card__head">
                   <p class="voice-card__profile">20代(男性)</p>
-                  <span class="voice__category?? campaign-list__category">ファンダイビング</span>
+                  <span class="voice-card__category">ファンダイビング</span>
                   <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
                 <figure class="voice-card__image color">
@@ -748,8 +737,8 @@
           </div>
           <div class="contact__form-area">
             <div class="contact__section-title section-title">
-              <h2 class="section-title__primary">contact</h2>
-              <p class="section-title__sub">お問い合わせ</p>
+              <h2 class="section-title__primary section-title__primary--contact">contact</h2>
+              <p class="section-title__sub section-title__sub--contact">お問い合わせ</p>
             </div>
             <a class="contact__text">ご予約・お問い合わせはコチラ</a>
             <div class="contact__btn">

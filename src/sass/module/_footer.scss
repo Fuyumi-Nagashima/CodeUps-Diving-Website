@@ -1,10 +1,10 @@
 @use "global" as *;
-.inner.footer__inner{
+.footer__inner{
     padding-left: rem(14);
     padding-right: rem(14);
     @include mq('md'){
-        padding-left:25px;
-        padding-right:25px;
+        padding-left:rem(25);
+        padding-right:rem(25);
     }
 }
 .footer__top{

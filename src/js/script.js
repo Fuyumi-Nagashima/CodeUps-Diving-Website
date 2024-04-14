@@ -1,18 +1,18 @@
 "use strict";
 jQuery(function ($) {
-    $(".js-hamburger").on("click", function () {
-        $(".js-hamburger,.header").toggleClass("is-active");
+    $(".js-header-header__hamburger").on("click", function () {
+        $(".js-header-header__hamburger,.header").toggleClass("is-active");
         $(".js-drawer").fadeToggle();
         $("body").toggleClass("active");
     });
     $(".js-drawer a[href]").on("click", function () {
-        $(".js-hamburger").trigger("click");
+        $(".js-header-header__hamburger").trigger("click");
     });
 
     //768px以上でドロワーを非表示にする
     $(window).on('resize', function() {
       if (window.matchMedia("(min-width: 768px)").matches) {
-        $(".js-hamburger").removeClass("is-active");
+        $(".js-header-header__hamburger").removeClass("is-active");
         $(".js-drawer").fadeOut();
       }
     });
@@ -20,7 +20,7 @@ jQuery(function ($) {
       //ハンバーガーメニューを開いている時のスクロールを禁止する(背景固定)
     var state = false;
     var pos;
-    $(".js-hamburger").on("click", function () {
+    $(".js-header-header__hamburger").on("click", function () {
         if (state == false) {
         pos = $(window).scrollTop();
         $("body").addClass("js-fixed").css({
@@ -37,7 +37,7 @@ jQuery(function ($) {
       });
     
       //fvスライダー
-      const swiper = new Swiper(".fv__swiper", {
+      const swiper = new Swiper(".js-fv__swiper", {
         loop: true,
         effect: "fade",
         speed: 3000,
@@ -50,11 +50,11 @@ jQuery(function ($) {
       //campaignスライダー
       var topCampaign_swiper = new Swiper(".js-campaign-swiper", {
         loop: true,
-        speed: 30000000,
+        speed: 3000,
         slidesPerView: "auto",
         spaceBetween: 24,
         autoplay: {
-          delay: 30000000, 
+          delay: 3000, 
           disableOnInteraction: false,
         },
         breakpoints: {

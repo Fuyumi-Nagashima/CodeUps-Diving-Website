@@ -32,6 +32,19 @@
     line-height: calc(18/12);
     font-weight: $regular;
 }
+.voice-card__category{
+    display:inline-block;
+    width:fit-content;
+    font-size: rem(12);
+    line-height: calc(22/12);
+    font-weight: $regular;
+    color:$main-green;
+    border:1px solid $main-green;
+    padding:rem(3) rem(11);
+    @include mq('md'){
+    padding:rem(6) rem(14);
+    }
+}
 .voice-card__title{
     font-size: rem(16);
     font-weight:$medium;

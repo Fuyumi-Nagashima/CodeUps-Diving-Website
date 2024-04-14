@@ -1,11 +1,5 @@
 @use "global" as *;
-.campaign__slide{
-    width: rem(280);
-    @include mq('md'){
-        width: rem(334);
-    }
-}
-.inner.campaign__inner{
+.campaign__inner{
     margin: auto;
     width: 100%;
     @include mq(md){
@@ -21,10 +15,6 @@
             margin-top:rem(40);
     }
 }
-.campaign-swiper__wrapper{
-    padding-bottom:rem(10);
-    padding-left:rem(2);
-}
 .campaign__btn{
     text-align:center;
     margin-top: rem(30);
@@ -35,8 +25,8 @@
 
 //swiperのボタン
 //swipeナビボタンのデフォルト矢印打消し
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.campaign__next::after,
+.campaign__prev::after {
     content: "";
 }
 .campaign__btn-wrap{
@@ -48,13 +38,13 @@
         height:rem(80);
     }   
 }
-.campaign__btn-wrap .swiper-button-next {
+.campaign__next {
     @include mq('md'){
-        margin-left: rem(96);
+        margin-left: rem(90);
     }
 }
-.campaign-prev,
-.campaign-next{
+.campaign__prev,
+.campaign__next{
     @include mq('md'){
         position: initial;
         margin-top:0;/*デフォルト打消し*/
@@ -66,8 +56,8 @@
         transition: all 0.3s; 
     }   
 }
-.campaign__btn-wrap .campaign-prev::before,
-.campaign__btn-wrap .campaign-next::before {
+.campaign__prev::before,
+.campaign__next::before {
     @include mq('md'){
         content: "";
         position: absolute;
@@ -78,26 +68,26 @@
     }
     
 } 
-.campaign__btn-wrap .campaign-prev::before {
+.campaign__prev::before {
     @include mq('md'){
         background-image:url(../images/common/prev-arrow.png);
     }
 }
-.campaign__btn-wrap .campaign-next::before {
+.campaign__next::before {
     @include mq('md'){
         background-image:url(../images/common/next-arrow.png)
     }
     
 }
-.campaign-next:hover,
-.campaign-prev:hover{
+.campaign__next:hover,
+.campaign__prev:hover{
     @include mq('md'){
         background-color:$main-green;
     }
     
 }
-.campaign__btn-wrap .campaign-prev:hover::before,
-.campaign__btn-wrap .campaign-next:hover::before {
+.campaign__prev:hover::before,
+.campaign__next:hover::before {
     @include mq('md'){
     filter: brightness(0) invert(1);
     }

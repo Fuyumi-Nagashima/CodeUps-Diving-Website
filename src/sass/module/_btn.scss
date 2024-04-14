@@ -61,7 +61,7 @@
 .btn:hover span{
     color:$main-green;
 }
-.btn:hover.btn__arrow{
+.btn:hover .btn__arrow{
     margin-left:rem(8);
     width:rem(40);
     height:rem(6);
@@ -75,18 +75,18 @@
     z-index:10;
 }
 //btn--whiteのCSS
-.btn.btn--white{
+.btn--white{
     background-color: $white;
     color: $main-green;
 }
-.btn.btn--white::before{
+.btn--white::before{
     border:1px solid $white;
 }
-.btn__arrow.btn__arrow--white{
+.btn__arrow--white{
     border-bottom: 1px solid $main-green;
     border-right: 1px solid $main-green;
 }
-.btn.btn--white::after{
+.btn--white::after{
     background-color: $main-green;
     border: 1px solid $white;
 }
