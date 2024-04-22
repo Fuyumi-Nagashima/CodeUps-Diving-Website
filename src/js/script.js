@@ -134,4 +134,12 @@ jQuery(function ($) {
       });
     }
   });
-});
+
+  //下層アコーディオンメニュー
+  $(".accordion__answer").css("display", "block");
+  $(".accordion__answer").addClass("is-open");
+  $(".js-accordion-title").on("click", function() {
+    $(this).next().slideToggle(300);
+    $(this).toggleClass("is-open",300);
+  });
+  });

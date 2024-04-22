@@ -1,0 +1,20 @@
+@use "global" as *;
+.form-input input{
+    padding: rem(8) rem(16);
+	width: 100%;
+	font-size: rem(16);
+    color:#DDF0F1;;
+	line-height:calc(23/16);
+	border-radius: 0;
+	border: 1px solid $main-green;
+	appearance: none;
+	background-color: transparent;
+	background-image:none;
+}
+
+.form-input input:focus {
+	border: 1px solid #ccc;
+	box-shadow: none;
+	outline: none;
+}
+

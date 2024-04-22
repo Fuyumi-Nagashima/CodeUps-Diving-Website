@@ -1,0 +1,73 @@
+@use "global" as *;
+.accordion{
+    width:100%;
+    display: grid;
+    gap: rem(40);
+    @include mq('md'){
+        max-width:rem(700);
+        margin-inline:auto;
+        gap: rem(34);
+    }
+}
+.accordion__question {
+    background:$main-green;
+    color:$white;
+    cursor: pointer;
+    font-size: rem(16);
+    padding: rem(16);
+    position: relative;
+    @include mq('md'){
+    font-size: rem(20);
+    padding: rem(25) rem(40);
+    }
+}
+.accordion__question::before {
+    position: absolute;
+    content: '';
+    top: 44%;
+    right: 16px;
+    height: rem(1);
+    width: rem(28);
+    background:$white;
+    transform: rotate(180deg);
+    transition: all .3s ease-in-out;
+    @include mq('md'){
+        width: rem(32);
+        right: 40px;
+    }
+}
+.accordion__question:after {
+    position: absolute;
+    content: '';
+    top: 44%;
+    right: 16px;
+    height: rem(1);
+    width: rem(28);
+    background: $white;
+    transform: rotate(180deg);
+    transition: all .3s ease-in-out;
+    @include mq('md'){
+        width: rem(32);
+        right: 40px;
+    }
+}
+.accordion__question.is-open:before {
+    transform: rotate(180deg);
+}
+.accordion__question.is-open:after {
+    transform: rotate(90deg);
+}
+.accordion__answer{
+    color:$font-color;
+    font-size: rem(16);
+    border-top: 1px solid $main-green;
+    border-left: 1px solid $main-green;
+    border-right: 1px solid $main-green;
+    border-bottom: 1px solid $main-green;
+    display: none;
+    padding: rem(19) rem(16);
+    @include mq('md'){
+        padding: rem(40) ;
+        margin-top:rem(16);
+    }
+}

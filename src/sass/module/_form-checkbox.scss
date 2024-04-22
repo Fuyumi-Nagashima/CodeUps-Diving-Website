@@ -1,0 +1,53 @@
+@use "global" as *;
+.form-checkbox__items{
+    display: flex;
+    flex-direction:column;
+    gap:rem(4);
+}
+.form-checkbox input {
+    display:none;
+}
+.form-checkbox input + span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left:rem(22);
+    position: relative;
+    font-size: rem(16);
+    line-height:1;
+}
+.form-checkbox input + span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background:$white;
+    border: 1px solid $main-green;
+    display: block;
+    width: rem(14);
+    height:rem(14);
+}
+.form-checkbox input + span::after {
+    content: "";
+    margin-left: rem(2);
+    margin-top:rem(-1);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: rem(9);
+    height: rem(5);
+    border-bottom: rem(2) solid #C94800;
+    border-left: rem(2) solid #C94800;
+    transition:  .3s;
+    opacity: 0;
+}
+.form-checkbox__items{
+    @include mq('md'){
+        display:flex;
+    }
+}
+.form-checkbox input:checked + span::after {
+    opacity: 1;
+}

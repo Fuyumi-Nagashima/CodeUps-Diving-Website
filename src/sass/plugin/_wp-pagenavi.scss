@@ -1,0 +1,83 @@
+@use "global" as *;
+.wp-pagenavi {
+	margin-top:rem(80);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    @include mq('md'){
+        margin-top:rem(72);
+    }
+}
+.wp-pagenavi__number{
+    display:flex;
+    gap:rem(12);
+}
+.wp-pagenavi .first{
+    margin-right:rem(40);
+}
+.wp-pagenavi .last {
+    margin-left:rem(40);
+}
+.wp-pagenavi a {
+	color:$main-green;
+}
+.wp-pagenavi span.current,
+.wp-pagenavi a.page,
+// .wp-pagenavi .extend,
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+	// margin: 0 10px 0 0;
+	width:rem(38);
+	height: rem(38);
+    font-size:rem(16);
+    font-weight:$bold;
+    border:1px solid $main-green;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-items:center;
+}
+.wp-pagenavi span.current{
+    background-color:$main-green;
+    color:$white;
+}
+.wp-pagenavi a.page:hover,
+.wp-pagenavi .last:hover,
+.wp-pagenavi .first:hover{
+	background:$main-green;
+	color:$white;
+    transition:0.3s;
+}
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    //HTMLで消すのではなくCSSで消す
+    display:none;
+}
+.wp-pagenavi .first,
+.wp-pagenavi .last{
+    position:relative;
+}
+.wp-pagenavi .first::before,
+.wp-pagenavi .last::before{
+    position: absolute;
+    content: "";
+    height:rem(16);
+    width:rem(8);
+}
+.wp-pagenavi .first::before{
+    background:url(../images/common/page-voice-angle-blue.png) no-repeat;
+    transform: scale(-1,1);
+    background-size:contain;
+
+}
+.wp-pagenavi .last::before{
+    background:url(../images/common/page-voice-angle-blue.png) no-repeat;
+    background-size:contain;
+}
+a.page.larger.u-desktop{
+    display: none;
+    @include mq('md'){
+        display:block;
+    }
+}
