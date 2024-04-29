@@ -1,0 +1,83 @@
+@use "global" as *;
+.gallery-list{
+    display:grid;
+    gap:rem(8);
+    @include mq('md'){
+        grid-template-columns: repeat(11, 1fr);
+        grid-auto-flow: dense;
+}
+}
+.gallery-list__item:nth-of-type(6n+1), 
+.gallery-list__item:nth-of-type(6n+6){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 345 / 523;  
+    transition: .6s;  
+    @include mq('md'){
+        grid-column: span 5;
+        grid-row: span 2;
+        aspect-ratio: 492 / 746;    
+    }
+}
+.gallery-list__item {
+    cursor: pointer;
+    @include mq('md'){
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+}
+.gallery-list__item img {   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 580 / 369;
+    transition: .6s;
+}
+
+/*モーダル*/
+.modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: rem(40) rem(20);
+    transition: opacity 0.4s, visibility 0.4s;
+    opacity: 0;
+    background: rgba(0, 0, 0, 50%);
+}
+.modal.is-open {
+    visibility: visible;
+    opacity: 1;
+}
+.modal__inner {
+    margin: auto;
+    padding: 0 rem(20);
+    max-width:rem(523);
+    width: 100%;
+}
+.modal__img img {
+    width: 100%;
+    height:100%;
+    aspect-ratio: 345/219;
+    object-fit: cover;
+    @include mq('md'){
+        aspect-ratio:580/369;
+    }
+}
+.modal__img:nth-of-type(6n+1) img, 
+.modal__img:nth-of-type(6n+6) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 345 / 523;  
+    @include mq('md'){
+        aspect-ratio: 492 / 746;    
+    }
+}

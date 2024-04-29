@@ -11,18 +11,13 @@
     text-align: center;
     margin-top:rem(40);
     @include mq('md'){
-        margin-top:rem(87);
+        margin-top:rem(80);
     }
 }
 .blog__cards{
-    display:grid;
-    row-gap:rem(36);
     margin-top:rem(28);
     @include mq('md'){
-        grid-template-columns: repeat(3, 1fr);
-        column-gap:rem(40);
         margin-top:rem(80);
-        //grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
     }
 }
 .section-title__primary--white::first-letter{

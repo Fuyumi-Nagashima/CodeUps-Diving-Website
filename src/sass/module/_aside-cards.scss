@@ -1,0 +1,6 @@
+@use "global" as *;
+.aside-cards{
+    display:flex;
+    flex-direction:column;
+    gap:rem(40);
+}

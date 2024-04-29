@@ -15,6 +15,9 @@
         line-height: 1;
     }
 }
+.section-title__primary span{
+    text-transform: lowercase;
+}
 .section-title__primary--white{
     @include mq('md'){
         color:$white;

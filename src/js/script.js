@@ -142,4 +142,52 @@ jQuery(function ($) {
     $(this).next().slideToggle(300);
     $(this).toggleClass("is-open",300);
   });
-  });
+
+  //ブログ詳細ぺージのアコーディオン 
+  //親要素のクリックイベント
+$('.asideblog-list__year').click(function() {
+	$(this).next('ul').slideToggle();
+});
+//子要素のクリックイベント
+$('.menu-subtitle').click(function() {
+	$(this).children('ul').slideToggle();
+});
+$('.asideblog-list__month').click(function() {
+	$(this).children('ul').slideToggle();
+}); 
+//最初の年数の矢印を開いた状態にする
+$(".asideblog-lists__list:first-of-type .asideblog-list__year").addClass("open");
+//年代をクリックしたら中身が出たり隠れたりする
+$('.js-asideblog-list__year,.js-asideblog-list__month').on('click',function (){
+  $(this).toggleClass('open');
+});
+
+//下層ページpage-informationタブ切り替え
+$('.js-tab').on('click',function(){
+  $('.js-tab,.js-panel').removeClass('active');
+  $(this).addClass('active');
+  const index = $('.js-tab').index(this);
+  $('.js-panel').eq(index).addClass('active');
+});
+
+//モーダルウィンドウ
+const open = $(".js-modal-open");
+const close = $(".modal");
+const modal = $(".js-modal");
+
+// 開くボタンをクリックしたらモーダルを表示する
+open.on("click", function () {
+    const target = $(this).attr("target");
+    const targetModal = $("#" + target);
+    targetModal.addClass("is-open");
+    $("html, body").css("overflow", "hidden"); // スクロールを禁止する
+});
+
+// 閉じるボタンをクリックしたらモーダルを閉じる
+close.on("click", function () {
+    modal.removeClass("is-open");
+    $("html, body").css("overflow", "initial"); // スクロールを有効にする
+});
+
+
+});

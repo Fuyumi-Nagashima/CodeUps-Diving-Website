@@ -1,0 +1,25 @@
+@use "global" as *;
+.layout-page-about{
+    margin-top:rem(52);
+    position:relative;
+    @include mq('md'){
+        margin-top:rem(150);
+    }
+}
+.layout-page-about::before{
+    position: absolute;
+    content: "";
+    left:4%;
+    top:rem(-25);
+    height:rem(55);
+    width:rem(120);
+    background:url(../images/common/top-voice-icon01.png) no-repeat;
+    background-size:contain;
+    z-index: -1;
+    @include mq('md'){
+        height:rem(138);
+        width:rem(301);
+        left: calc(50% - min(43vw, rem(623)));
+        top:rem(-67);
+    }
+}

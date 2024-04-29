@@ -1,0 +1,44 @@
+@use "global" as *;
+.aside-wrapper__ranking-content{
+    margin-top:rem(24);
+    display: grid;
+    gap: rem(24);
+}
+
+.aside-wrapper__title span{
+    position:relative;
+    padding-left:rem(58);
+    font-size: rem(24);
+    line-height: 1.9;
+    font-weight: $regular;
+}
+.aside-wrapper__title span::before{
+    position:absolute;
+    content:"";
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/common/underpage-blog-title-icon.png) ;
+    left:0;
+    width: rem(50);
+    height: rem(50);
+    z-index:1;
+}
+.aside-wrapper__title{
+    position:relative;
+    padding-left: 24px;
+}
+.aside-wrapper__title::before{
+    position:absolute;
+    content:"";
+    display:inline-block;
+    width:rem(8);
+    height:rem(50);
+    background-color:$main-green;
+    top:0;
+    left:0;
+}
+.aside-wrapper__image img{
+    aspect-ratio: 294 / 218;
+    height: 100%;
+    object-fit: cover;
+}

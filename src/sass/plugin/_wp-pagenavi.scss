@@ -1,13 +1,9 @@
 @use "global" as *;
 .wp-pagenavi {
-	margin-top:rem(80);
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    @include mq('md'){
-        margin-top:rem(72);
-    }
 }
 .wp-pagenavi__number{
     display:flex;
@@ -24,10 +20,8 @@
 }
 .wp-pagenavi span.current,
 .wp-pagenavi a.page,
-// .wp-pagenavi .extend,
 .wp-pagenavi .first,
 .wp-pagenavi .last {
-	// margin: 0 10px 0 0;
 	width:rem(38);
 	height: rem(38);
     font-size:rem(16);
@@ -75,9 +69,21 @@
     background:url(../images/common/page-voice-angle-blue.png) no-repeat;
     background-size:contain;
 }
+.wp-pagenavi .first:hover::before{
+    background:url(../images/common/page-voice-angle-white.png) no-repeat;
+    background-size:contain;
+    transform: scale(1,1);
+}
+.wp-pagenavi .last:hover::before{
+    background:url(../images/common/page-voice-angle-white.png) no-repeat;
+    background-size:contain;
+    transform: scale(-1,1);
+}
 a.page.larger.u-desktop{
     display: none;
     @include mq('md'){
         display:block;
     }
 }
+
+
