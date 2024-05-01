@@ -1,0 +1,14 @@
+@use "global" as *;
+.page-campaign-cards{
+    display:grid;
+    row-gap:rem(40);
+    margin-top:rem(40);
+    @include mq('md'){
+        grid-template-columns: repeat(2, 1fr);
+        column-gap:rem(40);
+        row-gap:rem(80);
+    }
+}
+.page-campaign__wp-pagenavi{
+    margin-top:rem(80);
+}

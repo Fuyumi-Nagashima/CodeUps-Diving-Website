@@ -1,0 +1,31 @@
+@use "global" as *;
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(21);
+}
+.category__item{
+    display: inline-block;
+    width: fit-content;
+    font-size: rem(14);
+    text-align: center;
+    line-height: calc(22 / 14);
+    max-width:rem(162);
+    width:100%;
+    font-weight: $regular;
+    color:$main-green;
+    background-color:$white;
+    border: 1px solid $main-green;
+    padding:rem(6);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.category__item.is-active {
+    background:$main-green;
+    color:$white;
+}
+.category__item:hover{
+    color:$white;
+    background-color:$main-green;
+    opacity: 1;
+}

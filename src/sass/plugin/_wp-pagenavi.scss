@@ -82,7 +82,7 @@
 a.page.larger.u-desktop{
     display: none;
     @include mq('md'){
-        display:block;
+        display:flex;
     }
 }
 

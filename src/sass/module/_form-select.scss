@@ -9,9 +9,12 @@
     background-image: url(./../images/common/page-contact-arrow.svg);
     background-repeat: no-repeat;
     background-size: rem(12);
-    background-position: right rem(15) top rem(15);
+    background-position: right rem(5) top rem(12);
     appearance: none;
     cursor: pointer;
+    @include mq('md'){
+        padding: rem(7) rem(28) rem(6) rem(8);
+    }
 }
 
 .form-select select::-ms-expand {

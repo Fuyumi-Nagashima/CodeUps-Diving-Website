@@ -18,8 +18,8 @@
     @include mq('md'){
         height:rem(138);
         width:rem(301);
-        top:-10%;
-        right: calc(50% - min(48vw, rem(662)));    
+        top:-12%;
+        right: calc(50% - min(48vw, rem(672)));    
     }
 }
 .layout-sub-contact--faq{

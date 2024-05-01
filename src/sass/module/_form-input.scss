@@ -4,7 +4,7 @@
 	width: 100%;
 	font-size: rem(16);
     color:#DDF0F1;;
-	line-height:calc(23/16);
+	line-height:calc(16/23);
 	border-radius: 0;
 	border: 1px solid $main-green;
 	appearance: none;
@@ -13,8 +13,14 @@
 }
 
 .form-input input:focus {
-	border: 1px solid #ccc;
+	border: 2px solid $main-green;
 	box-shadow: none;
 	outline: none;
 }
+.form-input input[type="text"]:focus,
+.form-input input[type="tel"]:focus,
+.form-input input[type="email"]:focus {
+	color: $font-color;
+}
+
 

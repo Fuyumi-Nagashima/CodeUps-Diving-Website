@@ -1,12 +1,12 @@
 @use "global" as *;
-.layout-page-contact{
+.layout-page-campaign{
     margin-top:rem(52);
     position:relative;
     @include mq('md'){
     margin-top:rem(150);
     }
 }
-.layout-page-contact::before{
+.layout-page-campaign::before{
     position: absolute;
     content: "";
     left:4%;
@@ -20,6 +20,6 @@
         height:rem(138);
         width:rem(301);
         left: calc(50% - min(43vw, rem(623)));
-        top:-7%;
+        top:rem(-67);
     }
 }

@@ -1,7 +1,7 @@
 @use "global" as *;
-.blog__inner{
-    padding-right:rem(21);
-    padding-left:rem(21);
+.inner.blog__inner{
+    padding-right:21px;
+    padding-left:21px;
     @include mq('md'){
         padding-right:rem(25);
         padding-left:rem(25);   

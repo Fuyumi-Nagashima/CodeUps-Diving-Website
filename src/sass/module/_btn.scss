@@ -82,7 +82,7 @@
 .btn--white::before{
     border:1px solid $white;
 }
-.btn__arrow--white{
+.btn__arrow.btn__arrow--green{
     border-bottom: 1px solid $main-green;
     border-right: 1px solid $main-green;
 }
@@ -93,7 +93,7 @@
 .btn--white:hover span{
     color:$white;
 }
-.btn--white:hover .btn__arrow--white{
+.btn--white:hover .btn__arrow--green{
     margin-left:rem(8);
     width:rem(40);
     height:rem(6);
