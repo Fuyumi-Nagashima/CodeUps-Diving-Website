@@ -84,19 +84,19 @@
 }
 .sub-price-list__course{
     width:69%;
-    padding:rem(6);
+    padding:rem(7);
     text-align:center;
     font-size:rem(16);
     line-height:calc(24/16);
     @include mq('md'){
-        padding: 18px 16px;
+        padding: rem(18) rem(15);
         text-align: left;
         width:68%;
     }
 }
 .sub-price-list__price{
     width:31%;
-    padding:rem(18) rem(16);
+    padding:rem(17);
     text-align:right;
     border-left: 1px solid $main-green;
 }
