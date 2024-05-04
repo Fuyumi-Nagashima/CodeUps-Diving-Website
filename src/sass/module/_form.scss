@@ -15,9 +15,11 @@
     }
 }
 .form__label span {
+    width: rem(61);
+    max-width:100%;
     font-size: rem(12);
     margin-left: rem(8);
-    letter-spacing: 0.4em;
+    letter-spacing: 0.4em;  
     padding:rem(2) rem(14);
     display: inline-block;
     color: $white;

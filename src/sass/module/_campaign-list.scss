@@ -122,16 +122,23 @@
 .campaign-list__information {
     flex-grow: 1;
 }
-.campaign-list__body--sub-page{
+/*下層ページ(page-campaign)のCSS*/
+.campaign-list__body--subpage{
     @include mq('md'){
-        padding:rem(24);
+        padding:rem(24) rem(24) rem(40) rem(24);
     }
 }
-.campaign-list__title--big{
+.campaign-list__title.campaign-list__title--big{
     @include mq('md'){
     font-size: rem(24);
     font-weight:$medium;
+    padding-bottom:0;
 }    
+}
+.campaign-list__text.campaign-list__text--subpage{
+    @include mq('md'){
+        margin-top:rem(24);
+    }
 }
 .campaign-list__information-wrap{
     margin-top:rem(24);

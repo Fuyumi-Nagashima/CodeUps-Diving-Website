@@ -3,6 +3,12 @@
 .aside-review__content{
     margin-top:rem(24);
 }
+.aside-review__image img{
+    aspect-ratio:294 / 218;
+    height:100%;
+    object-fit:cover;
+}
+
 .aside-review__textarea{
     margin-top:rem(16);
 }

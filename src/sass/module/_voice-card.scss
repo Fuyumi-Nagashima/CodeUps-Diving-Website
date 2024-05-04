@@ -27,6 +27,9 @@
         align-items: flex-end;
     }
 }
+.voice-card__head--subpage{
+    padding-bottom: 0;
+}
 .voice-card__profile{
     font-size: rem(12);
     line-height: calc(18/12);

@@ -190,4 +190,28 @@ close.on("click", function () {
 });
 
 
+//別ページからアクティブなタブへのリンク
+var hash = location.hash;
+hash = (hash.match(/^#tab\d+$/) || [])[0];
+
+//リンクにハッシュが入っていればtabnameに格納
+if($(hash).length){
+  var tabname = hash.slice(1) ;
+} else {
+  var tabname = "tab1";
+}
+
+//コンテンツ非表示&タブを非アクティブ
+$('.tab__content-item ').removeClass("active");
+$('.tab__menu li').removeClass('active');
+
+//何番目のタブかを格納
+var tabno = $('.tab__menu li#' + tabname).index();
+
+//コンテンツ表示
+$('.tab__content-item').eq(tabno).addClass('active');
+
+//タブのアクティブ化
+$('.tab__menu li').eq(tabno).addClass('active');
+$('ul.tab__menu li').eq(tabno).addClass('active');
 });

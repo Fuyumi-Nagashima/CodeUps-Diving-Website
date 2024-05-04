@@ -1,7 +1,7 @@
 @use "global" as *;
-.contact__inner{
-    padding-right:rem(40);
-    padding-left:rem(40);
+.inner.contact__inner{
+    padding-right:40px;
+    padding-left:40px;
     @include mq('md'){
         padding-right:rem(25);
         padding-left:rem(25);

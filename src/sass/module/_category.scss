@@ -2,7 +2,11 @@
 .category{
     display: flex;
     flex-wrap: wrap;
-    gap: rem(21);
+    column-gap:rem(21);
+    row-gap:rem(16);
+    @include mq('md'){
+    column-gap: rem(32);
+    }
 }
 .category__item{
     display: inline-block;
@@ -16,7 +20,7 @@
     color:$main-green;
     background-color:$white;
     border: 1px solid $main-green;
-    padding:rem(6);
+    padding:rem(5);
     text-transform: uppercase;
     transition: 0.3s;
 }

@@ -4,19 +4,28 @@
     grid-template-columns: repeat(3,1fr);
     gap:rem(20);
     cursor: pointer;
+    @include mq('md'){
+        column-gap:rem(90);
+    }
 }
 .tab__menu-item{
     min-width:rem(102);
     width: 100%;
     margin-inline: auto;
     text-align: center;
-    padding:rem(10) rem(16);
+    padding:rem(9) rem(16);
+    font-size:rem(14);
     background-color:#DDF0F1;
     color:$main-green; 
     transition:0.3s ease-in-out;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
     @include mq('md'){
-    padding:rem(29) rem(18) rem(26);
+    padding:rem(29) rem(0) rem(26) rem(0);
+    line-height:1;
+    display:inline-block;
+    font-size:rem(24);
+    min-width:rem(300);
+    width:100%;
     }
 }
 .tab__menu-item:hover{
@@ -28,11 +37,9 @@
     color:$main-green; 
 }
 .tab__menu-item span{
-    font-size:rem(14);
     @include mq('md'){
         position:relative;
-        padding-left:rem(72);
-        font-size: rem(24);
+        padding-left:rem(72)
     }
 }
 .tab__menu-item span::before{
@@ -53,9 +60,12 @@
     mask-image: url(../images/common/mini-icon-whale.svg);
     background-color:$white;
 }
-.tab__menu-item:nth-child(2) span::before,
-.tab__menu-item:nth-child(3) span::before {
+.tab__menu-item:nth-child(2) span::before{
     mask-image: url(../images/common/mini-icon-shark.svg);
+    background-color:$main-green;
+}
+.tab__menu-item:nth-child(3) span::before {
+    mask-image: url(../images/common/mini-icon-fish.svg);
     background-color:$main-green;
 }
 
@@ -79,6 +89,7 @@
     mask-image: url(../images/common/mini-icon-shark.svg);
 }
 
+
 .tab__content-inner {
     margin-top: rem(16);
     border: 1px solid $main-green;
@@ -98,13 +109,18 @@
 .tab__content-image{
     margin-top:rem(8);
     @include mq('md'){
-        width:45%;
+        max-width: 492px;
+        width: 100%;
     }
 }
+
 .tab__content-image img{
     aspect-ratio: 294 / 189;
     height: 100%;
     object-fit: cover;
+    @include mq('md'){
+    aspect-ratio: 492 / 313;
+    }
 }
 .tab__content-heading{
     font-size: rem(24);

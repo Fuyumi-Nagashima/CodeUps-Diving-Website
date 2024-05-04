@@ -1,14 +1,13 @@
 @use "global" as *;
 .single-body__main{
     @include mq('md'){
-        width:64%;
+        width:65%;
+        position: relative;
     }   
 }
 .single-body__wrapper{
     @include mq('md'){
         display:flex;
-        justify-content:space-between;
-        gap:rem(83);
     }
 }
 .single-body__date{
@@ -21,6 +20,8 @@
     font-weight:$medium;
     border-bottom:1px solid $main-green;
     margin-top:rem(8);
+    line-height: 1;
+    padding-bottom:rem(5);
     @include mq('md'){
     font-size:rem(32);
     }
@@ -72,8 +73,10 @@
     z-index: 1;
 }
 .single-body__wp-pagenavi{
-    margin-top:rem(40);
+    margin-top:rem(50);
     @include mq('md'){
-        margin-top:rem(80);
+        margin-top:rem(86);
+        position: absolute;
+        left: 37%;
     }
 }

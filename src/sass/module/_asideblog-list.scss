@@ -10,6 +10,8 @@
     position:relative;
     color:$main-green;
     font-size:rem(24);
+    font-weight: $regular;
+    margin-top:rem(3);
 }
 .asideblog-list__year::before,
 .asideblog-list__month::before{
@@ -17,7 +19,7 @@
     width:0;
     height:0;
     border-style:solid;
-    border-width: 12px 0 12px 24px;
+    border-width:12px 0 12px 20.8px;
     border-color: transparent transparent transparent $main-green;  
     transition: transform .3s;
     display: inline-block;

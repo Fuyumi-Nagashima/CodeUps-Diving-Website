@@ -3,9 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-html,body{
-  // overflow-x: hidden;
-}
 /* Remove default padding */
 ul,
 ol {
@@ -48,7 +45,7 @@ body.js-fixed {
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul
- {
+{
   list-style:none;
 }
 
