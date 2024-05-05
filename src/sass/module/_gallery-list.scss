@@ -50,7 +50,7 @@
     padding: rem(40) rem(20);
     transition: opacity 0.4s, visibility 0.4s;
     opacity: 0;
-    background: rgba(0, 0, 0, 50%);
+    background: rgba(32, 32, 32, 80%);
 }
 .modal.is-open {
     visibility: visible;
@@ -62,7 +62,7 @@
     max-width:rem(523);
     width: 100%;
 }
-.modal__img {
+.modal__img img {
     width: 100%;
     height:100%;
     aspect-ratio: 345/219;
@@ -71,8 +71,8 @@
         aspect-ratio:580/369;
     }
 }
-.modal__img:nth-of-type(6n+1) img, 
-.modal__img:nth-of-type(6n+6) img{
+.modal__img:nth-of-type(6n+1) , 
+.modal__img:nth-of-type(6n+6){
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -81,3 +81,4 @@
         aspect-ratio: 492 / 746;    
     }
 }
+

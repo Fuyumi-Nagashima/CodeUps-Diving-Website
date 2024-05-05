@@ -170,14 +170,14 @@ $('.js-tab').on('click',function(){
   $('.js-panel').eq(index).addClass('active');
 });
 
-//モーダルウィンドウ
+//Aboutページのモーダルウィンドウ
 const open = $(".js-modal-open");
 const close = $(".modal");
 const modal = $(".js-modal");
 
 // 開くボタンをクリックしたらモーダルを表示する
 open.on("click", function () {
-    const target = $(this).attr("target");
+    const target = $(this).attr("data-target"); // 属性名を修正
     const targetModal = $("#" + target);
     targetModal.addClass("is-open");
     $("html, body").css("overflow", "hidden"); // スクロールを禁止する
@@ -188,6 +188,7 @@ close.on("click", function () {
     modal.removeClass("is-open");
     $("html, body").css("overflow", "initial"); // スクロールを有効にする
 });
+
 
 
 //別ページからアクティブなタブへのリンク
