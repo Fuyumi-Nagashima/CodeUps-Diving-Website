@@ -2,7 +2,7 @@
 .tab__menu{
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    gap:rem(20);
+    gap:rem(19);
     cursor: pointer;
     @include mq('md'){
         column-gap:rem(90);
@@ -20,11 +20,11 @@
     transition:0.3s ease-in-out;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
     @include mq('md'){
-    padding:rem(29) rem(0) rem(26) rem(0);
+    padding:rem(29) rem(0) rem(29) rem(0);
     line-height:1;
     display:inline-block;
     font-size:rem(24);
-    min-width:rem(300);
+    max-width:rem(300);
     width:100%;
     }
 }
@@ -88,13 +88,12 @@
     background-color:$white;
     mask-image: url(../images/common/mini-icon-shark.svg);
 }
-
-
 .tab__content-inner {
     margin-top: rem(16);
     border: 1px solid $main-green;
     padding: rem(24);
     @include mq('md'){
+    margin-top: rem(24);    
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -113,7 +112,6 @@
         width: 100%;
     }
 }
-
 .tab__content-image img{
     aspect-ratio: 294 / 189;
     height: 100%;

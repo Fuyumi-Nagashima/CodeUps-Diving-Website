@@ -177,18 +177,17 @@ const modal = $(".js-modal");
 
 // 開くボタンをクリックしたらモーダルを表示する
 open.on("click", function () {
-    const target = $(this).attr("data-target"); // 属性名を修正
-    const targetModal = $("#" + target);
-    targetModal.addClass("is-open");
+  var imgSrc = $(this).children().attr('src');
+  $('.modal__img,modal__img--long').children().attr('src', imgSrc);
+  $('.modal').fadeIn();
     $("html, body").css("overflow", "hidden"); // スクロールを禁止する
 });
 
 // 閉じるボタンをクリックしたらモーダルを閉じる
 close.on("click", function () {
-    modal.removeClass("is-open");
+  $('.modal').fadeOut();
     $("html, body").css("overflow", "initial"); // スクロールを有効にする
 });
-
 
 
 //別ページからアクティブなタブへのリンク
