@@ -136,8 +136,8 @@ jQuery(function ($) {
   });
 
   //下層アコーディオンメニュー
-  $(".accordion__answer").css("display", "block");
-  $(".accordion__answer").addClass("is-open");
+  // $(".accordion__answer").css("display", "block");
+  // $(".accordion__answer").addClass("is-open");
   $(".js-accordion-title").on("click", function() {
     $(this).next().slideToggle(300);
     $(this).toggleClass("is-open",300);
@@ -164,10 +164,10 @@ $('.js-asideblog-list__year,.js-asideblog-list__month').on('click',function (){
 
 //下層ページpage-informationタブ切り替え
 $('.js-tab').on('click',function(){
-  $('.js-tab,.js-panel').removeClass('active');
-  $(this).addClass('active');
+  $('.js-tab,.js-panel').removeClass('is-active');
+  $(this).addClass('is-active');
   const index = $('.js-tab').index(this);
-  $('.js-panel').eq(index).addClass('active');
+  $('.js-panel').eq(index).addClass('is-active');
 });
 
 //Aboutページのモーダルウィンドウ
@@ -200,18 +200,45 @@ if($(hash).length){
 } else {
   var tabname = "tab1";
 }
+//リロードしたときにスクロールと止める→タブがheaderにかぶらなくなる
+$(window).on('load', function () {
+  if($(hash).length) {
+    $('body,html').stop().scrollTop(0);
+  }
+})
 
 //コンテンツ非表示&タブを非アクティブ
-$('.tab__content-item ').removeClass("active");
-$('.tab__menu li').removeClass('active');
+$('.tab__content-item ').removeClass("is-active");
+$('.tab__menu li').removeClass('is-active');
 
 //何番目のタブかを格納
 var tabno = $('.tab__menu li#' + tabname).index();
 
 //コンテンツ表示
-$('.tab__content-item').eq(tabno).addClass('active');
+$('.tab__content-item').eq(tabno).addClass('is-active');
 
 //タブのアクティブ化
-$('.tab__menu li').eq(tabno).addClass('active');
-$('ul.tab__menu li').eq(tabno).addClass('active');
+$('.tab__menu li').eq(tabno).addClass('is-active');
+$('ul.tab__menu li').eq(tabno).addClass('is-active');
+
+//informationページのfooterにあるtabメニューをクリックするとscrollして該当タブがactviveになる
+$('a[href^="#"]').click(function() {
+  const speed = 600;
+  let href = $(this).attr("href");
+  let target = $(href == "#" || href == "" ? "html" : href);
+  let pon = target.offset().top - $('.layout-page-information-mv').outerHeight(); // ヘッダーの高さ分オフセットを追加
+  // タブのアクティブ化処理
+  if ($(target).length) {
+    $('.js-tab, .js-panel').removeClass('is-active');
+    $(target).addClass('is-active');
+    const index = $('.js-tab').index(target);
+    $('.js-panel').eq(index).addClass('is-active');
+  }
+
+  // スクロール処理
+  let position = target.offset().top;
+  $("body,html").animate({ scrollTop: position }, speed, "swing");
+  return false;
+
+});
 });

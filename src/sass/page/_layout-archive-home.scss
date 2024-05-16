@@ -1,6 +1,10 @@
 @use "global" as *;
 .layout-archive-home{ 
     position: relative;
+    margin-top:rem(52);
+    @include mq('md'){
+        margin-top:rem(150); 
+    }
 }
 .layout-archive-home::before{
     position: absolute;

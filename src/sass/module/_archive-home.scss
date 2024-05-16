@@ -7,19 +7,14 @@
     }
 }
 .archive-home__wrapper{
-    margin-top:rem(52);
     @include mq('md'){
         display:flex; 
-        margin-top:rem(150); 
 }
 }
 .archive-home__main{
     width:100%;
     @include mq('md'){
         width:65%;
-        display: flex;
-        flex-direction: column;
-        gap:rem(80);
     }    
 }
 .archive-home__side{
@@ -38,7 +33,4 @@
 }
 .archive-home__wp-pagenavi{
     margin-top:rem(80);
-    @include mq('md'){
-        margin-top:0;
-    }
 }

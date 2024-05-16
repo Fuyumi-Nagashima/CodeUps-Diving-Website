@@ -19,6 +19,7 @@
     color:$main-green; 
     transition:0.3s ease-in-out;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index:10;//あしらいをタブより上にもってくるため
     @include mq('md'){
     padding:rem(29) rem(0) rem(29) rem(0);
     line-height:1;
@@ -32,7 +33,7 @@
     background-color:$main-green;
     color:$white; 
 }
-.tab__menu-item.active{
+.tab__menu-item.is-active{
     background-color:#DDF0F1;
     color:$main-green; 
 }
@@ -56,7 +57,7 @@
         transform: translateY(-50%);
     }
 }
-.tab__menu-item.active:nth-child(1) span::before {
+.tab__menu-item.is-active:nth-child(1) span::before {
     mask-image: url(../images/common/mini-icon-whale.svg);
     background-color:$white;
 }
@@ -71,7 +72,7 @@
 
 //ホバーしたらSVGの色を変える
 .tab__menu-item:nth-child(1):hover span::before {
-    background-color:$main-green;
+    background-color:$white;
 }
 .tab__menu-item:nth-child(2):hover span::before,
 .tab__menu-item:nth-child(3):hover span::before {
@@ -82,11 +83,15 @@
     mask-image: url(../images/common/mini-icon-whale.svg);
     background-color:$main-green;
 }
-.tab__menu-item.active:nth-child(2) span::before,
-.tab__menu-item.active:nth-child(3) span::before  {
+.tab__menu-item.is-active:nth-child(2) span::before  {
     -webkit-mask-image: url(../images/common/mini-icon-shark.svg);
     background-color:$white;
     mask-image: url(../images/common/mini-icon-shark.svg);
+}
+.tab__menu-item.is-active:nth-child(3) span::before  {
+    -webkit-mask-image: url(../images/common/mini-icon-fish.svg);
+    background-color:$white;
+    mask-image: url(../images/common/mini-icon-fish.svg);
 }
 .tab__content-inner {
     margin-top: rem(16);
@@ -135,11 +140,11 @@
     font-size:rem(16);
     line-height:calc(24/16);
 }
-.tab__menu-item.active {
+.tab__menu-item.is-active {
     background-color:$main-green;
     color:$white;
 }
-.tab__content-item.active{
+.tab__content-item.is-active{
     display:block;
     animation: panel-show .9s ease-in-out forwards;
 }

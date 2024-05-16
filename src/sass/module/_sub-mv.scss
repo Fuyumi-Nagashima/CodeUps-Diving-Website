@@ -1,11 +1,18 @@
 @use "global" as *;
+.sub-mv{
+    position:relative;
+}
 .sub-mv__page-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top:rem(206);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding-top:rem(206);
     @include mq('md'){
-    padding-top:rem(274);
+    // padding-top:rem(274);
     }
 }
 .sub-mv__title{

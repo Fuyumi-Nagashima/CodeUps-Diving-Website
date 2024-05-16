@@ -64,7 +64,6 @@
     border-left: 1px solid $main-green;
     border-right: 1px solid $main-green;
     border-bottom: 1px solid $main-green;
-    display: none;
     padding: rem(19) rem(16);
     @include mq('md'){
         padding: rem(40) ;
