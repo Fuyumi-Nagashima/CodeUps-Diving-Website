@@ -221,24 +221,23 @@ $('.tab__content-item').eq(tabno).addClass('is-active');
 $('.tab__menu li').eq(tabno).addClass('is-active');
 $('ul.tab__menu li').eq(tabno).addClass('is-active');
 
-//informationページのfooterにあるtabメニューをクリックするとscrollして該当タブがactviveになる
-$('a[href^="#"]').click(function() {
-  const speed = 600;
-  let href = $(this).attr("href");
-  let target = $(href == "#" || href == "" ? "html" : href);
-  let pon = target.offset().top - $('.layout-page-information-mv').outerHeight(); // ヘッダーの高さ分オフセットを追加
-  // タブのアクティブ化処理
-  if ($(target).length) {
-    $('.js-tab, .js-panel').removeClass('is-active');
-    $(target).addClass('is-active');
-    const index = $('.js-tab').index(target);
-    $('.js-panel').eq(index).addClass('is-active');
+// ページが読み込まれた後の処理
+//page-informationのdrawerとfooterのダイビング情報をクリックしたら
+//指定したタブをuるis-activeにした状態でページ遷移する
+$(document).ready(function() {
+  // URLからクエリパラメータを取得
+  const urlParams = new URLSearchParams(window.location.search);
+  const tabParam = urlParams.get('tab');
+  // クエリパラメータがある場合のみ処理を実行
+  if (tabParam) {
+    // タブメニューのアクティブクラスを削除
+    $('.tab__menu-item').removeClass('is-active');
+    // クエリパラメータに応じて特定のタブをアクティブにする
+    $('#' + tabParam).addClass('is-active');
   }
+});
 
-  // スクロール処理
-  let position = target.offset().top;
-  $("body,html").animate({ scrollTop: position }, speed, "swing");
-  return false;
 
 });
-});
+
+
