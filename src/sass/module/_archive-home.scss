@@ -1,36 +1,4 @@
 @use "global" as *;
-.inner.archive-home__inner{
-    padding-right:21px;
-    padding-left:21px;
-    @include mq('md'){
-
-    }
-}
-.archive-home__wrapper{
-    @include mq('md'){
-        display:flex; 
-}
-}
-.archive-home__main{
-    width:100%;
-    @include mq('md'){
-        width:65%;
-    }    
-}
-.archive-home__side{
-    max-width:rem(294);
-    width:100%;
-    margin-inline:auto;
-    display:flex;
-    flex-direction:column;
-    gap:rem(80);
-    margin-top:rem(80);
-    @include mq('md'){
-        margin-top:0;
-        width:27%;
-        margin-left: rem(87);
-    }
-}
 .archive-home__wp-pagenavi{
     margin-top:rem(80);
 }

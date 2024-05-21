@@ -1,0 +1,7 @@
+@use "global" as *;
+.inner.sub-blog__inner{
+    padding-right:21px;
+    padding-left:21px;
+    @include mq('md'){
+    }
+}

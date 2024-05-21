@@ -1,11 +1,15 @@
 @use "global" as *;
-.accordion{
-    width:100%;
-    display: grid;
-    gap: rem(40);
+.page-faq__inner.inner {
+        width:100%;
     @include mq('md'){
-        max-width:rem(700);
-        margin-inline:auto;
+        max-width: rem(750);
+        margin-inline: auto;
+    }
+}
+.accordion{
+    display: grid;
+    gap:rem(40);
+    @include mq('md'){
         gap: rem(34);
     }
 }

@@ -1,0 +1,26 @@
+@use "global" as *;
+.two-column__wrapper{
+    @include mq('md'){
+        display:flex; 
+}
+}
+.two-column__main{
+    width:100%;
+    @include mq('md'){
+        width:65%;
+    }  
+}
+.two-column__side{
+    max-width:rem(294);
+    width:100%;
+    margin-inline:auto;
+    display:flex;
+    flex-direction:column;
+    gap:rem(80);
+    margin-top:rem(80);
+    @include mq('md'){
+        margin-top:0;
+        width:27%;
+        margin-left: rem(87);
+    }
+}

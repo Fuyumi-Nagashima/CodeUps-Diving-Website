@@ -207,10 +207,11 @@
         </ol>
       </nav>
       <!-- ブログ一覧ページ -->
-      <section class="layout-single-body single-body">
-        <div class="single-body__inner inner">
-          <div class="div single-body__wrapper">
-            <div class="single-body__main">
+      <section class="single-body layout-single-body ">
+        <div class="single-body__inner sub-blog__inner inner">
+          <div class="single-body__wrapper two-column">
+            <div class="two-column__wrapper">
+              <div class="two-column__main">
                 <time class="single-body__date" datetime="2023-11-17">2023/11/17</time>
                 <h3 class="single-body__title">ライセンス取得</h3>
                 <div class="single-body__content">
@@ -226,7 +227,9 @@
                       />
                     </picture>
                   </figure>
-                    <p class="single-body__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  <div class="single-body__text-wrap">
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  </div>
                 </div>
                 <div class="single-body__content">
                   <figure class="single-body__image">
@@ -241,23 +244,25 @@
                       />
                     </picture>
                   </figure>
-                    <p class="single-body__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                    <ul class="single-body__lists">
-                      <li class="single-body__list"><span>リスト1</span></li>
-                      <li class="single-body__list"><span>リスト2</span></li>
-                      <li class="single-body__list"><span>リスト3</span></li>
+                  <div class="single-body__text-wrap">
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                    <ul>
+                      <li><a href="#">リスト1</a></li>
+                      <li><a href="#">リスト2</a></li>
+                      <li><a href="#">リスト3</a></li>
                     </ul>
-                    <p class="single-body__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                    <div class="wp-pagenavi single-body__wp-pagenavi" role="navigation">
-                      <a class="first" aria-label="First Page" href="#"></a>
-                      <a class="previouspostslink" rel="prev" aria-label="前のページ" href="#">&lt;</a>
-                      <a class="nextpostslink" rel="next" aria-label="次のページ" href="#">&gt;</a>
-                      <a class="last" aria-label="Last Page" href="#"></a>
-                    </div>
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                  </div>
+                  <div class="wp-pagenavi single-body__wp-pagenavi" role="navigation">
+                    <a class="first" aria-label="First Page" href="#"></a>
+                    <a class="previouspostslink" rel="prev" aria-label="前のページ" href="#">&lt;</a>
+                    <a class="nextpostslink" rel="next" aria-label="次のページ" href="#">&gt;</a>
+                    <a class="last" aria-label="Last Page" href="#"></a>
+                  </div>
                 </div>
-            </div>
-            <!-- サイドバー -->
-              <aside class="archive-home__side aside-wrapper">
+              </div>
+              <!-- サイドバー -->
+              <aside class="two-column__side aside-wrapper">
                 <!-- ランキングセクション -->
                 <div class="aside-wrapper__ranking aside-ranking">
                   <h2  class="aside-wrapper__title"><span>人気記事</span></h2>
@@ -461,6 +466,8 @@
                 </div><!--asideblog-lists-->
               </div>
             </aside>
+            </div><!--two-column__main-->
+
           </div>
         </div><!--inner-->
       </section>
