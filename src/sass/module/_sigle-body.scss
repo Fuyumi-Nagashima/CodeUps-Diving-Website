@@ -74,7 +74,5 @@
     margin-top:rem(50);
     @include mq('md'){
         margin-top:rem(86);
-        position: absolute;
-        left: 37%;
     }
 }
