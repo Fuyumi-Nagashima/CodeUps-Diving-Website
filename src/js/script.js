@@ -191,52 +191,45 @@ close.on("click", function () {
 
 
 //別ページからアクティブなタブへのリンク
-var hash = location.hash;
-hash = (hash.match(/^#tab\d+$/) || [])[0];
-
-//リンクにハッシュが入っていればtabnameに格納
-if($(hash).length){
-  var tabname = hash.slice(1) ;
-} else {
-  var tabname = "tab1";
-}
-//リロードしたときにスクロールと止める→タブがheaderにかぶらなくなる
-$(window).on('load', function () {
-  if($(hash).length) {
-    $('body,html').stop().scrollTop(0);
-  }
-})
-
-//コンテンツ非表示&タブを非アクティブ
-$('.tab__content-item ').removeClass("is-active");
-$('.tab__menu li').removeClass('is-active');
-
-//何番目のタブかを格納
-var tabno = $('.tab__menu li#' + tabname).index();
-
-//コンテンツ表示
-$('.tab__content-item').eq(tabno).addClass('is-active');
-
-//タブのアクティブ化
-$('.tab__menu li').eq(tabno).addClass('is-active');
-$('ul.tab__menu li').eq(tabno).addClass('is-active');
-
-// ページが読み込まれた後の処理
-//page-informationのdrawerとfooterのダイビング情報をクリックしたら
-//指定したタブをuるis-activeにした状態でページ遷移する
 $(document).ready(function() {
   // URLからクエリパラメータを取得
   const urlParams = new URLSearchParams(window.location.search);
-  const tabParam = urlParams.get('tab');
-  // クエリパラメータがある場合のみ処理を実行
-  if (tabParam) {
-    // タブメニューのアクティブクラスを削除
-    $('.tab__menu-item').removeClass('is-active');
-    // クエリパラメータに応じて特定のタブをアクティブにする
-    $('#' + tabParam).addClass('is-active');
+  const tabParam = urlParams.get('id');
+  
+  // 初期タブを決める変数を宣言
+  let initialTab = "tab1"; // デフォルトのタブ
+  if (tabParam && $('#' + tabParam).length) {
+    initialTab = tabParam;
   }
+  
+  // リロードしたときにスクロールを止める
+  $(window).on('load', function () {
+    if (tabParam) {
+      $('body,html').stop().scrollTop(0);
+    }
+  });
+  
+  // コンテンツ非表示 & タブを非アクティブ
+  $('.tab__content-item').removeClass("is-active");
+  $('.tab__menu li').removeClass('is-active');
+  
+  // 何番目のタブかを格納
+  const tabno = $('.tab__menu li#' + initialTab).index();
+  
+  // コンテンツ表示
+  $('.tab__content-item').eq(tabno).addClass('is-active');
+  
+  // タブのアクティブ化
+  $('.tab__menu li').eq(tabno).addClass('is-active');
+  
+  // タブクリック時の処理
+  $('.js-tab').on('click', function() {
+    $('.js-tab,.js-panel').removeClass('is-active');
+    $(this).addClass('is-active');
+    const index = $('.js-tab').index(this);
+    $('.js-panel').eq(index).addClass('is-active');
+  });
 });
-
 
 });
 

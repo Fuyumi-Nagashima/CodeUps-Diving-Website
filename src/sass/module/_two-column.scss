@@ -1,5 +1,5 @@
 @use "global" as *;
-.two-column__wrapper{
+.two-column__flex{
     @include mq('md'){
         display:flex; 
 }

@@ -1,12 +1,12 @@
 @use "global" as *;
-.layout-archive-home{ 
+.layout-two-column{ 
     position: relative;
     margin-top:rem(52);
     @include mq('md'){
         margin-top:rem(150); 
     }
 }
-.layout-archive-home::before{
+.layout-two-column::before{
     position: absolute;
     content: "";
     left:4%;
