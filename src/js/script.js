@@ -50,11 +50,11 @@ jQuery(function ($) {
       //campaignスライダー
       var topCampaign_swiper = new Swiper(".js-campaign-swiper", {
         loop: true,
-        speed: 30000000,
+        speed: 3000,
         slidesPerView: "auto",
         spaceBetween: 24,
         autoplay: {
-          delay: 30000000, 
+          delay: 3000, 
           disableOnInteraction: false,
         },
         breakpoints: {
@@ -232,5 +232,3 @@ $(document).ready(function() {
 });
 
 });
-
-
